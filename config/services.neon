@@ -1,0 +1,11 @@
+services:
+	- App\Core\RouterFactory::createRouter
+	- App\Model\BookApiService(%GoogleBooks_API_KEY%, %wwwDir%)
+	- App\Model\FileManager(%wwwDir%, %GoogleBooks_API_KEY%)
+
+
+search:
+    in: %appDir%
+    classes:
+        - *Factory
+        - *Facade
