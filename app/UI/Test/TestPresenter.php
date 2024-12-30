@@ -23,12 +23,18 @@ class TestPresenter extends Presenter
         //$this->template->favorite = $topBooks;
 
         // book by id
+        /*
         $topBooks = $this->fileManager->get10RecommendedTitles();
         $randBook = $topBooks[0];
         $randBookId = $randBook['id'];
         $book = $this->bookApiService->getBookById($randBookId);
         bdump($book);
         $this->template->book = $book;
+        */
+        // book by query
+        $query = "Na západní frontě klid";
+        $books = $this->bookApiService->getBooksByQuery($query);
+        $this->template->books = $books;
 
     }
 }

@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Model;
-use Google\Client;
-use Google\Service\Books;
 
 class FileManager
 {
@@ -36,12 +34,11 @@ class FileManager
             $topBooksTitles[] = [
                 "id" => $books[$randN]['id'],
                 "title" => $books[$randN]['title'],
-                "authors" => $books[$randN]['authors'],
-                "cover" => $books[$randN]['cover'],
+                "authors" => $books[$randN]['author'],
+                "cover" => $books[$randN]['thumbnail'],
                 "publishedDate" => $books[$randN]['publishedDate']
             ];
         }
-        bdump($topBooksTitles);
         return $topBooksTitles;
     }
 

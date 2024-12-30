@@ -21,39 +21,12 @@ class BookApiService
         $this->service = new Books($this->client);
     }
 
-    public function getBooksByQuery(string $query): array
+    private function retrieveDetails($results): array
     {
-        $params = [
-            'maxResults' => 40,
-        ];
+        $books = [];
 
-        try{
-            $results = $this->service->volumes->listVolumes($query, $params);
-            $books = [];
-
-            foreach ($results as $item) {
-                $book = [
-                    'title' => $item['volumeInfo']['title'],
-                    'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : 'Unknown',
-                    'publisher' => $item['volumeInfo']['publisher'] ?? 'Unknown',
-                ];
-
-                $books[] = $book;
-            }
-
-            return $books;
-        }
-        catch(\Exception $e){
-            return ['Error' => $e->getMessage()];
-        }
-    }
-
-    public function getBookById(string $id): array
-    {
-        try {
-            $item = $this->service->volumes->get($id);
-
-            $book = [
+        foreach ($results as $item) {
+            $books[] = [
                 'title' => $item['volumeInfo']['title'] ?? 'Unknown',
                 'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : 'Unknown',
                 'publisher' => $item['volumeInfo']['publisher'] ?? 'Unknown',
@@ -65,8 +38,32 @@ class BookApiService
                 'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? 'Unknown',
                 'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? 'Unknown',
             ];
+        }
 
-            return $book;
+        return $books;
+    }
+
+    public function getBooksByQuery(string $query): array
+    {
+        $params = [
+            'maxResults' => 40,
+            'orderBy' => 'relevance',
+        ];
+
+        try{
+            $results = $this->service->volumes->listVolumes($query, $params);
+            return $this->retrieveDetails($results);
+        }
+        catch(\Exception $e){
+            return ['Error' => $e->getMessage()];
+        }
+    }
+
+    public function getBookById(string $id): array
+    {
+        try {
+            $item = $this->service->volumes->get($id);
+            return $this->retrieveDetails($item);
         } catch (\Exception $e) {
             return ['Error' => $e->getMessage()];
         }
