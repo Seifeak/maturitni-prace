@@ -8,6 +8,7 @@ class BookApiService
 {
     private Client $client;
     private Books $service;
+    private const MAX_RESULTS = 30;
 
     public function __construct(
         private readonly string $API_KEY,
@@ -43,11 +44,14 @@ class BookApiService
         return $books;
     }
 
-    public function getBooksByQuery(string $query): array
+    public function searchBooksByQuery(string $query, int $page = 1): array
     {
+        $startIndex = ($page - 1) * self::MAX_RESULTS;
+
         $params = [
-            'maxResults' => 40,
             'orderBy' => 'relevance',
+            'maxResults' => self::MAX_RESULTS,
+            'startIndex' => $startIndex,
         ];
 
         try{
@@ -68,6 +72,43 @@ class BookApiService
             return ['Error' => $e->getMessage()];
         }
     }
+
+    private function searchBooksByCriteria(string $query, string $type, int $page = 1): array
+    {
+        $startIndex = ($page - 1) * self::MAX_RESULTS;
+
+        $params = [
+            'maxResults' => self::MAX_RESULTS,
+            'startIndex' => $startIndex,
+        ];
+
+        switch ($type){
+            case "author":
+                $query = 'inauthor:' . $query;
+                break;
+            case "title":
+                $query = 'intitle:' . $query;
+                break;
+            case "isbn":
+                $query = 'isbn:' . $query;
+                break;
+            case "category":
+                $query = 'subject:' . $query;
+                break;
+            default:
+                break;
+        }
+
+        try{
+            $results = $this->service->volumes->listVolumes($query, $params);
+            return $this->retrieveDetails($results);
+        }
+        catch(\Exception $e){
+            return ['Error' => $e->getMessage()];
+        }
+    }
+
+
 
 
 }
