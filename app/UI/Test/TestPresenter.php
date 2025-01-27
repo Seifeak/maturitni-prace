@@ -33,7 +33,7 @@ class TestPresenter extends Presenter
         */
         // book by query
         $query = "Na západní frontě klid";
-        $books = $this->bookApiService->getBooksByQuery($query);
+        $books = $this->bookApiService->searchBooksByQuery($query);
         $this->template->books = $books;
 
     }
