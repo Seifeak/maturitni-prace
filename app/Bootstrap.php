@@ -18,7 +18,7 @@ class   Bootstrap
 	{
 		$this->rootDir = dirname(__DIR__);
 		$this->configurator = new Configurator;
-		$this->configurator->setTempDirectory($this->rootDir . '/temp');
+		$this->configurator->setTempDirectory($this->rootDir . DIRECTORY_SEPARATOR . 'temp');
 	}
 
 
@@ -33,7 +33,7 @@ class   Bootstrap
 	public function initializeEnvironment(): void
 	{
 		//$this->configurator->setDebugMode('secret@23.75.345.200'); // enable for your remote IP
-		$this->configurator->enableTracy($this->rootDir . '/log');
+		$this->configurator->enableTracy($this->rootDir . DIRECTORY_SEPARATOR . 'log');
 
 		$this->configurator->createRobotLoader()
 			->addDirectory(__DIR__)
@@ -43,8 +43,8 @@ class   Bootstrap
 
 	private function setupContainer(): void
 	{
-		$configDir = $this->rootDir . '/config';
-		$this->configurator->addConfig($configDir . '/common.neon');
-		$this->configurator->addConfig($configDir . '/services.neon');
+		$configDir = $this->rootDir . DIRECTORY_SEPARATOR . 'config';
+		$this->configurator->addConfig($configDir . DIRECTORY_SEPARATOR . 'common.neon');
+		$this->configurator->addConfig($configDir . DIRECTORY_SEPARATOR . 'services.neon');
 	}
 }

@@ -12,7 +12,7 @@ class FileManager
 
     public function get10RecommendedTitles(): array
     {
-        $filePath = $this->wwwDir . '/data/recommended-books.json';
+        $filePath = $this->wwwDir . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'recommended-books.json';
         bdump($filePath);
 
         $jsonData = file_get_contents($filePath);
