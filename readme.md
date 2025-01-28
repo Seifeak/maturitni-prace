@@ -6,8 +6,9 @@ Tento git repozitář je součástí mojí maturitní práce k roku 2025. Slouž
 Požadavky
 ------------
 
-- XAMPP s PHP 8.1 
-- Composer
+- XAMPP s PHP 8.1 (https://www.apachefriends.org/download.html)
+- Composer (https://getcomposer.org/download/)
+- GIT (https://git-scm.com/downloads/win)
 
 Instalace
 ------------
