@@ -6,6 +6,7 @@ Tento git repozitář je součástí mojí maturitní práce k roku 2025. Slouž
 Požadavky
 ------------
 
+- PHP 8.1
 - Composer
 - XAMPP
 
