@@ -16,3 +16,4 @@ Instalace
 1. Naklonuj repozitář do C:\xampp\htdocs
 2. V této složce spusť composer install
 3. Zapni Apache
+4. Cesta k webové aplikaci je localhost/maturitni-prace/www
