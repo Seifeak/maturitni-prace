@@ -37,7 +37,7 @@ final class Template_f5debee798 extends Latte\Runtime\Template
 			}) /* line 7 */;
 			echo ' | ';
 		}
-		echo 'Nette Web</title>
+		echo 'Databáze knih</title>
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/swiper-icons.css">
     <link rel="stylesheet" href="/assets/css/bs-theme-overrides.css">
@@ -61,7 +61,9 @@ final class Template_f5debee798 extends Latte\Runtime\Template
 		echo '
 <nav class="navbar navbar-expand-md bg-body py-3"
      style="background: linear-gradient(179deg, #110077 0%, #16009d 100%);">
-    <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span
+    <div class="container"><a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Home:default')) /* line 20 */;
+		echo '" class="navbar-brand d-flex align-items-center"><span
                     class="bs-icon-md justify-content-center align-items-center me-2 bs-icon"
                     style="background: url(&quot;/assets/img/books.png&quot;);background-size: contain;"></span><span
                     style="color: #ffffff;font-weight: bold;font-size: 22px;">Databáze knih</span></a>
@@ -81,9 +83,15 @@ final class Template_f5debee798 extends Latte\Runtime\Template
                                 stroke-linecap="round"></path> </g></svg></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link active" href="#" style="color: #ffffff;">Domů</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" style="color: #ffffff;">Hledat</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" style="color: #ffffff;">Žánry</a></li>
+                <li class="nav-item"><a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Home:default')) /* line 40 */;
+		echo '" class="nav-link active" style="color: #ffffff;">Domů</a></li>
+                <li class="nav-item"><a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Results:default')) /* line 41 */;
+		echo '" class="nav-link" style="color: #ffffff;">Hledat</a></li>
+                <li class="nav-item"><a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Categories:default')) /* line 42 */;
+		echo '" class="nav-link" style="color: #ffffff;">Žánry</a></li>
             </ul>
             <form style="display: flex;"><input class="border rounded-0 form-control" type="search" name="book_search"
                                                 placeholder="Hledat knihu"
@@ -108,9 +116,15 @@ final class Template_f5debee798 extends Latte\Runtime\Template
 <footer class="text-center" style="color: #21252933;">
         <div class="container text-muted py-4 py-lg-5 footer-container">
             <ul class="list-inline footer-list">
-                <li class="list-inline-item me-4"><a href="#">Domů</a></li>
-                <li class="list-inline-item me-4"><a href="#">Hledat</a></li>
-                <li class="list-inline-item"><a href="#">Žánry</a></li>
+                <li class="list-inline-item me-4"><a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Home:default')) /* line 66 */;
+		echo '">Domů</a></li>
+                <li class="list-inline-item me-4"><a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Results:default')) /* line 67 */;
+		echo '">Hledat</a></li>
+                <li class="list-inline-item"><a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Categories:default')) /* line 68 */;
+		echo '">Žánry</a></li>
             </ul>
             <p class="mb-0">© 2025 | Tato webová stránka byla vytvořena Lukášem Seifertem jako součást maturitní práce.
                 Web je určen pouze pro nekomerční účely.</p>

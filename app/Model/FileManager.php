@@ -24,17 +24,19 @@ class FileManager
             throw new \Exception('Chyba při čtení JSON souboru.');
         }
 
-        $topBooksTitles = [];
-        for($i=0;$i<=10; $i++){
-            $randN = rand(0, (count($books) - 1));
-            $topBooksTitles[] = [
-                "id" => $books[$randN]['id'],
-                "title" => $books[$randN]['title'],
-                "authors" => $books[$randN]['author'],
-                "cover" => $books[$randN]['thumbnail'],
-                "publishedDate" => $books[$randN]['publishedDate']
+        shuffle($books);
+        $selectedBooks = array_slice($books, 0, 10);
+
+        $topBooksTitles = array_map(function ($book) {
+            return [
+                "id" => $book['id'],
+                "title" => $book['title'],
+                "authors" => $book['author'],
+                "cover" => $book['thumbnail'],
+                "publishedDate" => $book['publishedDate']
             ];
-        }
+        }, $selectedBooks);
+
         return $topBooksTitles;
     }
 

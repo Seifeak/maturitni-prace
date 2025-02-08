@@ -67,7 +67,21 @@ class BookApiService
     {
         try {
             $item = $this->service->volumes->get($id);
-            return $this->retrieveDetails($item);
+            $book = [
+                'title' => $item['volumeInfo']['title'] ?? 'Unknown',
+                'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : 'Unknown',
+                'publisher' => $item['volumeInfo']['publisher'] ?? 'Unknown',
+                'publishedDate' => $item['volumeInfo']['publishedDate'] ?? 'Unknown',
+                'description' => $item['volumeInfo']['description'] ?? 'Unknown',
+                'pageCount' => $item['volumeInfo']['pageCount'] ?? 'Unknown',
+                'categories' => isset($item['volumeInfo']['categories']) ? implode(', ', $item['volumeInfo']['categories']) : 'Unknown',
+                'averageRating' => $item['volumeInfo']['averageRating'] ?? 'Unknown',
+                'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? 'Unknown',
+                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? 'Unknown',
+            ];
+
+            bdump($book);
+            return $book;
         } catch (\Exception $e) {
             return ['Error' => $e->getMessage()];
         }

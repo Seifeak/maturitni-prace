@@ -22,7 +22,7 @@ final class HomePresenter extends Presenter
     public function renderDefault()
     {
         try {
-            $this->template->books = $this->fileManager->get10RecommendedTitles();
+            $this->template->recommendedBooks = $this->fileManager->get10RecommendedTitles();
         } catch (\Exception $e) {
             $this->flashMessage($e->getMessage(), 'danger');
         }

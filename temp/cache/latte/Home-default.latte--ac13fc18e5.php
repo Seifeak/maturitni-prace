@@ -27,7 +27,20 @@ final class Template_ac13fc18e5 extends Latte\Runtime\Template
 		echo "\n";
 		$this->renderBlock('content', get_defined_vars()) /* line 17 */;
 		echo "\n";
-		$this->renderBlock('scripts', get_defined_vars()) /* line 233 */;
+		$this->renderBlock('scripts', get_defined_vars()) /* line 125 */;
+	}
+
+
+	public function prepare(): array
+	{
+		extract($this->params);
+
+		if (!$this->getReferringTemplate() || $this->getReferenceType() === 'extends') {
+			foreach (array_intersect_key(['book' => '96'], $this->params) as $ʟ_v => $ʟ_l) {
+				trigger_error("Variable \$$ʟ_v overwritten in foreach on line $ʟ_l");
+			}
+		}
+		return get_defined_vars();
 	}
 
 
@@ -54,6 +67,10 @@ final class Template_ac13fc18e5 extends Latte\Runtime\Template
 	/** {block content} on line 17 */
 	public function blockContent(array $ʟ_args): void
 	{
+		extract($this->params);
+		extract($ʟ_args);
+		unset($ʟ_args);
+
 		echo '<section class="py-4 py-xl-5" style="/*padding-top: 59px;*/height: 420px;margin-top: 50px;">
     <div class="container h-100">
         <div class="row h-100">
@@ -132,127 +149,31 @@ final class Template_ac13fc18e5 extends Latte\Runtime\Template
             </button>
             <div class="slider-wrapper">
                 <div class="slider">
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
+';
+		foreach ($recommendedBooks as $book) /* line 96 */ {
+			echo '                    <div class="book-card">
+                        <a href="';
+			echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Book:details', ['id' => $book['id']])) /* line 98 */;
+			echo '" class="book_link">
                             <div class="book-cover">
                                 <img
-                                        src="http://books.google.com/books/content?id=NKnPsgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+                                        src="';
+			echo LR\Filters::escapeHtmlAttr(LR\Filters::safeUrl($book['cover'])) /* line 101 */;
+			echo '" />
                             </div>
-                            <div class="book-title">Na západní frontě klid</div>
-                            <div class="book-author">Erich Maria Remarque</div>
+                            <div class="book-title">';
+			echo LR\Filters::escapeHtmlText($book['title']) /* line 103 */;
+			echo '</div>
+                            <div class="book-author">';
+			echo LR\Filters::escapeHtmlText($book['authors']) /* line 104 */;
+			echo '</div>
                         </a>
                     </div>
+';
 
-                    <div class="book-card">
+		}
 
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title2</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title3</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title4</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title5</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title6</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title7</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title8</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title9</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title10</h1>
-                            </div>
-                        </a>
-                    </div>
-
+		echo '
                 </div>
             </div>
             <button class="slider-button next"><svg xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +192,7 @@ final class Template_ac13fc18e5 extends Latte\Runtime\Template
 	}
 
 
-	/** {block scripts} on line 233 */
+	/** {block scripts} on line 125 */
 	public function blockScripts(array $ʟ_args): void
 	{
 		echo '<script src="assets/js/slider.js"></script>

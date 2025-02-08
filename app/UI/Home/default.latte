@@ -93,126 +93,18 @@
             </button>
             <div class="slider-wrapper">
                 <div class="slider">
-
+                {foreach $recommendedBooks as $book}
                     <div class="book-card">
-
-                        <a class="book_link" href="#">
+                        <a class="book_link" n:href="Book:details, id => $book['id']">
                             <div class="book-cover">
                                 <img
-                                        src="http://books.google.com/books/content?id=NKnPsgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+                                        src="{$book["cover"]}" />
                             </div>
-                            <div class="book-title">Na západní frontě klid</div>
-                            <div class="book-author">Erich Maria Remarque</div>
+                            <div class="book-title">{$book["title"]}</div>
+                            <div class="book-author">{$book["authors"]}</div>
                         </a>
                     </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title2</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title3</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title4</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title5</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title6</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title7</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title8</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title9</h1>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="book-card">
-
-                        <a class="book_link" href="#">
-                            <div class="book-cover">
-                                <img src="assets/img/book_cover_placeholder.jpg" />
-                            </div>
-                            <div class="book-title">
-                                <h1>Title10</h1>
-                            </div>
-                        </a>
-                    </div>
+                {/foreach}
 
                 </div>
             </div>

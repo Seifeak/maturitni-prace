@@ -15,7 +15,7 @@ return array (
     'App\\UI\\Home\\HomePresenter' => 
     array (
       0 => '/var/www/mp/app/UI/Home/HomePresenter.php',
-      1 => 1735667615,
+      1 => 1739016441,
     ),
     'App\\UI\\Accessory\\LatteExtension' => 
     array (
@@ -27,15 +27,15 @@ return array (
       0 => '/var/www/mp/app/UI/Test/TestPresenter.php',
       1 => 1737997765,
     ),
-    'App\\UI\\Details\\DetailsPresenter' => 
+    'App\\UI\\Book\\BookPresenter' => 
     array (
-      0 => '/var/www/mp/app/UI/Details/DetailsPresenter.php',
-      1 => 1739015614,
+      0 => '/var/www/mp/app/UI/Book/BookPresenter.php',
+      1 => 1739019705,
     ),
     'App\\UI\\Results\\ResultsPresenter' => 
     array (
       0 => '/var/www/mp/app/UI/Results/ResultsPresenter.php',
-      1 => 1739014024,
+      1 => 1739019133,
     ),
     'App\\UI\\Error\\Error5xx\\Error5xxPresenter' => 
     array (
@@ -50,7 +50,7 @@ return array (
     'App\\Core\\RouterFactory' => 
     array (
       0 => '/var/www/mp/app/Core/RouterFactory.php',
-      1 => 1739014170,
+      1 => 1739019517,
     ),
     'App\\Model\\BookApiService' => 
     array (
@@ -60,7 +60,7 @@ return array (
     'App\\Model\\FileManager' => 
     array (
       0 => '/var/www/mp/app/Model/FileManager.php',
-      1 => 1737999256,
+      1 => 1739018916,
     ),
   ),
   1 => 

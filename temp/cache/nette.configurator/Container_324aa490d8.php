@@ -120,7 +120,7 @@ class Container_324aa490d8 extends Nette\DI\Container
 		'App\UI\Categories\CategoriesPresenter' => [2 => ['application.1']],
 		'App\UI\Home\HomePresenter' => [2 => ['application.2']],
 		'App\UI\Test\TestPresenter' => [2 => ['application.3']],
-		'App\UI\Details\DetailsPresenter' => [2 => ['application.4']],
+		'App\UI\Book\BookPresenter' => [2 => ['application.4']],
 		'App\UI\Results\ResultsPresenter' => [2 => ['application.5']],
 		'App\UI\Error\Error5xx\Error5xxPresenter' => [2 => ['application.6']],
 		'App\UI\Error\Error4xx\Error4xxPresenter' => [2 => ['application.7']],
@@ -204,9 +204,9 @@ class Container_324aa490d8 extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__4(): App\UI\Details\DetailsPresenter
+	public function createServiceApplication__4(): App\UI\Book\BookPresenter
 	{
-		$service = new App\UI\Details\DetailsPresenter;
+		$service = new App\UI\Book\BookPresenter($this->getService('02'));
 		$service->injectPrimary(
 			$this->getService('http.request'),
 			$this->getService('http.response'),
