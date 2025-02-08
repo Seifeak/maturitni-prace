@@ -60,29 +60,72 @@ class Container_324aa490d8 extends Nette\DI\Container
 		'Tracy\Bar' => [['tracy.bar']],
 		'Nette\Routing\RouteList' => [['01']],
 		'Nette\Routing\Router' => [['01']],
-		'ArrayAccess' => [2 => ['01', 'application.1', 'application.2', 'application.4']],
+		'ArrayAccess' => [
+			2 => [
+				'01',
+				'application.1',
+				'application.2',
+				'application.3',
+				'application.4',
+				'application.5',
+				'application.7',
+			],
+		],
 		'Nette\Application\Routers\RouteList' => [['01']],
 		'App\Model\BookApiService' => [['02']],
 		'App\Model\FileManager' => [['03']],
-		'Nette\Application\UI\Presenter' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\Application\UI\Control' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\Application\UI\Component' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\ComponentModel\Container' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\ComponentModel\Component' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\Application\IPresenter' => [
-			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.6'],
+		'Nette\Application\UI\Presenter' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
 		],
-		'Nette\Application\UI\Renderable' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\Application\UI\StatePersistent' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\Application\UI\SignalReceiver' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\ComponentModel\IContainer' => [2 => ['application.1', 'application.2', 'application.4']],
-		'Nette\ComponentModel\IComponent' => [2 => ['application.1', 'application.2', 'application.4']],
-		'App\UI\Home\HomePresenter' => [2 => ['application.1']],
-		'App\UI\Test\TestPresenter' => [2 => ['application.2']],
-		'App\UI\Error\Error5xx\Error5xxPresenter' => [2 => ['application.3']],
-		'App\UI\Error\Error4xx\Error4xxPresenter' => [2 => ['application.4']],
-		'NetteModule\ErrorPresenter' => [2 => ['application.5']],
-		'NetteModule\MicroPresenter' => [2 => ['application.6']],
+		'Nette\Application\UI\Control' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\Application\UI\Component' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\ComponentModel\Container' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\ComponentModel\Component' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\Application\IPresenter' => [
+			2 => [
+				'application.1',
+				'application.2',
+				'application.3',
+				'application.4',
+				'application.5',
+				'application.6',
+				'application.7',
+				'application.8',
+				'application.9',
+			],
+		],
+		'Nette\Application\UI\Renderable' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\Application\UI\StatePersistent' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\Application\UI\SignalReceiver' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\ComponentModel\IContainer' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'Nette\ComponentModel\IComponent' => [
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.7'],
+		],
+		'App\UI\Categories\CategoriesPresenter' => [2 => ['application.1']],
+		'App\UI\Home\HomePresenter' => [2 => ['application.2']],
+		'App\UI\Test\TestPresenter' => [2 => ['application.3']],
+		'App\UI\Details\DetailsPresenter' => [2 => ['application.4']],
+		'App\UI\Results\ResultsPresenter' => [2 => ['application.5']],
+		'App\UI\Error\Error5xx\Error5xxPresenter' => [2 => ['application.6']],
+		'App\UI\Error\Error4xx\Error4xxPresenter' => [2 => ['application.7']],
+		'NetteModule\ErrorPresenter' => [2 => ['application.8']],
+		'NetteModule\MicroPresenter' => [2 => ['application.9']],
 	];
 
 
@@ -110,7 +153,24 @@ class Container_324aa490d8 extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__1(): App\UI\Home\HomePresenter
+	public function createServiceApplication__1(): App\UI\Categories\CategoriesPresenter
+	{
+		$service = new App\UI\Categories\CategoriesPresenter;
+		$service->injectPrimary(
+			$this->getService('http.request'),
+			$this->getService('http.response'),
+			$this->getService('application.presenterFactory'),
+			$this->getService('01'),
+			$this->getService('session.session'),
+			$this->getService('security.user'),
+			$this->getService('latte.templateFactory'),
+		);
+		$service->invalidLinkMode = 5;
+		return $service;
+	}
+
+
+	public function createServiceApplication__2(): App\UI\Home\HomePresenter
 	{
 		$service = new App\UI\Home\HomePresenter($this->getService('03'));
 		$service->injectPrimary(
@@ -127,7 +187,7 @@ class Container_324aa490d8 extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__2(): App\UI\Test\TestPresenter
+	public function createServiceApplication__3(): App\UI\Test\TestPresenter
 	{
 		$service = new App\UI\Test\TestPresenter($this->getService('02'), $this->getService('03'));
 		$service->injectPrimary(
@@ -144,13 +204,47 @@ class Container_324aa490d8 extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__3(): App\UI\Error\Error5xx\Error5xxPresenter
+	public function createServiceApplication__4(): App\UI\Details\DetailsPresenter
+	{
+		$service = new App\UI\Details\DetailsPresenter;
+		$service->injectPrimary(
+			$this->getService('http.request'),
+			$this->getService('http.response'),
+			$this->getService('application.presenterFactory'),
+			$this->getService('01'),
+			$this->getService('session.session'),
+			$this->getService('security.user'),
+			$this->getService('latte.templateFactory'),
+		);
+		$service->invalidLinkMode = 5;
+		return $service;
+	}
+
+
+	public function createServiceApplication__5(): App\UI\Results\ResultsPresenter
+	{
+		$service = new App\UI\Results\ResultsPresenter;
+		$service->injectPrimary(
+			$this->getService('http.request'),
+			$this->getService('http.response'),
+			$this->getService('application.presenterFactory'),
+			$this->getService('01'),
+			$this->getService('session.session'),
+			$this->getService('security.user'),
+			$this->getService('latte.templateFactory'),
+		);
+		$service->invalidLinkMode = 5;
+		return $service;
+	}
+
+
+	public function createServiceApplication__6(): App\UI\Error\Error5xx\Error5xxPresenter
 	{
 		return new App\UI\Error\Error5xx\Error5xxPresenter($this->getService('tracy.logger'));
 	}
 
 
-	public function createServiceApplication__4(): App\UI\Error\Error4xx\Error4xxPresenter
+	public function createServiceApplication__7(): App\UI\Error\Error4xx\Error4xxPresenter
 	{
 		$service = new App\UI\Error\Error4xx\Error4xxPresenter;
 		$service->injectPrimary(
@@ -167,13 +261,13 @@ class Container_324aa490d8 extends Nette\DI\Container
 	}
 
 
-	public function createServiceApplication__5(): NetteModule\ErrorPresenter
+	public function createServiceApplication__8(): NetteModule\ErrorPresenter
 	{
 		return new NetteModule\ErrorPresenter($this->getService('tracy.logger'));
 	}
 
 
-	public function createServiceApplication__6(): NetteModule\MicroPresenter
+	public function createServiceApplication__9(): NetteModule\MicroPresenter
 	{
 		return new NetteModule\MicroPresenter($this, $this->getService('http.request'), $this->getService('01'));
 	}

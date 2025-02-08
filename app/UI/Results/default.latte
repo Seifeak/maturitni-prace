@@ -1,0 +1,74 @@
+{block styles}
+<link rel="stylesheet" href="/assets/css/slider.css">
+<link rel="stylesheet" href="/assets/css/styles-book-detail.css">
+<link rel="stylesheet" href="/assets/css/styles-categories.css">
+<link rel="stylesheet" href="/assets/css/styles-results.css">
+<link rel="stylesheet" href="/assets/css/styles.css">
+{/block}
+
+{block content}
+<div class="search-results-container">
+    <div class="search-header">
+        <div class="query-info-container">
+            <h1 class="query-title">Výsledky pro: Na západní frontě klid</h1>
+            <h1 class="result-count">nalezeno [n] výsledků.</h1>
+        </div>
+        <div class="search-bar">
+            <form class="search-form"><input class="form-control" type="search"
+                                             style="border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-right-style: none;"
+                                             placeholder="Hledat" name="search"><select class="form-select"
+                                                                                        style="border-radius: 0;width: auto;border-left-style: none;">
+                    <option value="all" selected="">Všechno</option>
+                    <option value="title">Podle názvu</option>
+                    <option value="author">Podle autora</option>
+                    <option value="isbn">Podle ISBN</option>
+                </select>
+                <button class="btn btn-primary" type="button"
+                        style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;width: 105.5938px;font-weight: bold;border-top-right-radius: 8px;border-bottom-right-radius: 8px;">
+                    Hledat
+                </button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="filter-panel">
+        <h2>Filtry</h2>
+        <div class="filter-box">
+            <h3>Autor</h3>
+            <form>
+                <input type="radio" name="author" id="remarque"><label for="remarque">Remarque</label><br>
+                <input type="radio" name="author" id="čapek"><label for="remarque">Čapek</label><br>
+                <input type="radio" name="author" id="němcová"><label for="remarque">Němcová</label><br>
+            </form>
+        </div>
+        <div class="filter-box">
+            <h3>Jazyk</h3>
+            <form>
+                <input type="radio" name="language" id="czech"><label for="czech">česky</label>
+            </form>
+        </div>
+    </div>
+    <div class="results-grid">
+        <div class="result-card">
+            <a href="#">
+                <img src="/assets/img/book_cover_placeholder.jpg" alt="Obálka knihy">
+                <div class="result-title">Na západní frontě klid</div>
+                <div class="result-author">Autor</div>
+            </a>
+        </div>
+    </div>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+{/block}
