@@ -1,0 +1,40 @@
+.genres-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 20px;
+}
+
+.genre-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.genre-section {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.genre-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.genre-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.genre-section ul li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .genre-section h2 {
+    font-size: 1.25rem;
+  }
+}
+

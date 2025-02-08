@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MP</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-icons.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/styles-book-detail.css">
+    <link rel="stylesheet" href="assets/css/styles-categories.css">
+    <link rel="stylesheet" href="assets/css/styles-results.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body py-3" style="background: linear-gradient(179deg, #110077 0%, #16009d 100%);">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-md justify-content-center align-items-center me-2 bs-icon" style="background: url(&quot;assets/img/books.png&quot;);background-size: contain;"></span><span style="color: #ffffff;font-weight: bold;font-size: 22px;">Databáze knih</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="border-color: rgba(255,255,255,0.65);"><span class="dropdown-burger"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path> <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path> <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path> </g></svg></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#" style="color: #ffffff;">Domů</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: #ffffff;">Hledat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: #ffffff;">Žánry</a></li>
+                </ul>
+                <form style="display: flex;"><input class="border rounded-0 form-control" type="search" name="book_search" placeholder="Hledat knihu" style="border-radius: 0px;border-style: solid;border-top-left-radius: 6px;border-bottom-left-radius: 6px;"><button class="btn btn-primary" type="button" style="width: 60px;height: auto;padding: initial;border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background: rgb(0,107,167);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-search" style="font-size: 23px;">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                        </svg></button></form>
+            </div>
+        </div>
+    </nav>
+    <div class="book-detail-container">
+        <div class="book-detail-cover"><img src="assets/img/book_cover_placeholder.jpg"></div>
+        <div class="book-detail-info">
+            <div class="book-detail-main-content">
+                <h1 class="book-detail-title" style="margin-bottom: 0.5rem;">[title]</h1>
+                <h2 class="book-detail-author" style="margin-bottom: 0px;">[author]</h2>
+                <h3 class="book-detail-releasedate" style="margin-bottom: 8px;">[release-date]</h3>
+                <div class="book-detail-rating"><img src="assets/img/star.png" alt="">
+<img src="assets/img/star.png" alt="">
+<img src="assets/img/star.png" alt="">
+<img src="assets/img/star.png" alt="">
+<img src="assets/img/star-half.png" alt="">
+<sub class="book-detail-rating-value">4.5</sub></div>
+                <div class="book-detail-description">
+                    <p><br><strong><span style="color: rgb(0, 0, 0);">Lorem Ipsum</span></strong><span style="color: rgb(0, 0, 0);">&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span><br><br></p>
+                </div>
+            </div>
+            <div class="book-detail-getbutton-container"><button class="btn btn-primary book-detail-getbutton" type="button">Získat knihu</button></div>
+            <div class="book-detail-moredetails"><table>
+    <tr>
+        <th>Vydavatel:</th>
+        <td>[publisher]</td>
+    </tr>
+    <tr>
+        <th>Počet stran:</th>
+        <td>[page_count]</td>
+    </tr>
+    <tr>
+        <th>Jazyk:</th>
+        <td>[lang]</td>
+    </tr>
+    <tr>
+        <th>ISBN:</th>
+        <td>[ISBN]</td>
+    </tr>
+</table></div>
+        </div>
+        <div class="book-detail-categories"><h3>Žánr</h3>
+<ul>
+    <li><a href="#">[category]</a></li>
+    <li><a href="#">[category]</a></li>
+    <li><a href="#">[category]</a></li>
+</ul></div>
+    </div>
+    <div class="book-detail-booksslider">
+        <div class="book-detail-booksslider-container">
+            <h1>Podobné knihy</h1><div class="slider-container">
+    <button class="slider-button prev"><svg xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </svg>
+    </button>
+    <div class="slider-wrapper">
+        <div class="slider">
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img
+                            src="http://books.google.com/books/content?id=NKnPsgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" />
+                    </div>
+                    <div class="book-title">Na západní frontě klid</div>
+                    <div class="book-author">Erich Maria Remarque</div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title2</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title3</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title4</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title5</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title6</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title7</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title8</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title9</h1>
+                    </div>
+                </a>
+            </div>
+
+            <div class="book-card">
+
+                <a class="book_link" href="#">
+                    <div class="book-cover">
+                        <img src="assets/img/book_cover_placeholder.jpg" />
+                    </div>
+                    <div class="book-title">
+                        <h1>Title10</h1>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <button class="slider-button next"><svg xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+
+
+    </button>
+</div>
+        </div>
+    </div>
+    <footer class="text-center" style="color: #21252933;">
+        <div class="container text-muted py-4 py-lg-5 footer-container">
+            <ul class="list-inline footer-list">
+                <li class="list-inline-item me-4"><a href="#">Domů</a></li>
+                <li class="list-inline-item me-4"><a href="#">Hledat</a></li>
+                <li class="list-inline-item"><a href="#">Žánry</a></li>
+            </ul>
+            <p class="mb-0">© 2025 | Tato webová stránka byla vytvořena Lukášem Seifertem jako součást maturitní práce. Web je určen pouze pro nekomerční účely.</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/statCountUp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+@media screen and (max-width: 768px) {
+  .form-select {
+    max-width: 0;
+  }
+}
+
+.index-slider-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .index-slider-container {
+    width: 100%;
+  }
+}
+
+.books-selection-container {
+  height: auto;
+  margin-top: 131px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #e3e3e3;
+}
+

@@ -1,0 +1,173 @@
+.filter-panel {
+  padding: 20px;
+  width: 250px;
+  border: 1px solid #2c3e50;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  float: left;
+}
+
+.filter-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.filter-box {
+  margin-bottom: 15px;
+}
+
+.filter-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+.filter-box label {
+  margin-left: 5px;
+}
+
+.results-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 0 20px;
+  grid-auto-rows: auto;
+}
+
+.result-card a {
+  text-decoration: none;
+}
+
+.result-card {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.result-card:hover {
+  transform: translateY(-8px);
+}
+
+.result-card img {
+  width: 100%;
+  height: auto;
+  max-width: 210px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-overflow: ellipsis;
+}
+
+.result-author {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.search-header {
+  padding: 20px 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-results-container {
+  width: 80vw;
+  margin: 1rem auto;
+}
+
+.query-info-container {
+  margin-bottom: 1rem;
+}
+
+.query-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.result-count {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.search-bar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-end;
+}
+
+.search-form {
+  height: 2.5rem;
+  display: flex;
+  padding: 0 5rem 0 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-panel {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .query-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-form {
+    width: 100%;
+    justify-content: left;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+  }
+}
+
+.pagination {
+  justify-content: right;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+

@@ -1,0 +1,118 @@
+/* Základní styly pro slider */
+
+.slider-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  flex: 1;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-button {
+  height: 40px;
+  width: 40px;
+  background: radial-gradient(#110077, #16009d);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider-button:hover {
+  background: #0056b3;
+}
+
+/* Responzivní úpravy */
+
+@media (max-width: 768px) {
+  .book-card {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-card {
+    flex: 0 0 100%;
+  }
+}
+
+.book-card {
+  flex: auto;
+  padding: 10px;
+  text-align: center;
+  /*background: #f5f5f5;*/
+  /*border: 1px solid #ddd;*/
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  flex: 1 1 auto;
+  margin-right: 1.5rem;
+}
+
+.book-card:hover {
+  transform: translateY(-8px);
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #24313d;
+}
+
+.book-author {
+  font-size: 14px;
+  color: #4c5455;
+  text-align: left;
+}
+
+.book-detail-bookslider {
+  width: auto;
+}
+
+.book-cover {
+  text-align: center;
+  width: 100%;
+  box-shadow: 8px 4px 10px;
+}
+
+.book-cover img {
+  aspect-ratio: 1/1.5;
+  width: 200px;
+  height: 100%;
+}
+
+.book-title {
+  text-align: left;
+  max-width: inherit;
+}
+
+.book-title h1 {
+  font-size: 20px;
+  margin-top: 8px;
+  margin-left: 5px;
+  padding-right: 30px;
+  overflow: clip;
+  text-align: left;
+}
+
+.book-title p {
+  margin-left: 5px;
+  overflow: clip;
+  text-align: left;
+}
+
