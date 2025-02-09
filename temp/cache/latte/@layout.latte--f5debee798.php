@@ -65,7 +65,7 @@ final class Template_f5debee798 extends Latte\Runtime\Template
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Home:default')) /* line 20 */;
 		echo '" class="navbar-brand d-flex align-items-center"><span
                     class="bs-icon-md justify-content-center align-items-center me-2 bs-icon"
-                    style="background: url(&quot;/assets/img/books.png&quot;);background-size: contain;"></span><span
+                    style="background: url(\'/assets/img/books.png\');background-size: contain;"></span><span
                     style="color: #ffffff;font-weight: bold;font-size: 22px;">Databáze knih</span></a>
         <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"
                 style="border-color: rgba(255,255,255,0.65);"><span class="dropdown-burger"><svg viewBox="0 0 24 24"
@@ -86,9 +86,6 @@ final class Template_f5debee798 extends Latte\Runtime\Template
                 <li class="nav-item"><a href="';
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Home:default')) /* line 40 */;
 		echo '" class="nav-link active" style="color: #ffffff;">Domů</a></li>
-                <li class="nav-item"><a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Results:default')) /* line 41 */;
-		echo '" class="nav-link" style="color: #ffffff;">Hledat</a></li>
                 <li class="nav-item"><a href="';
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Categories:default')) /* line 42 */;
 		echo '" class="nav-link" style="color: #ffffff;">Žánry</a></li>
@@ -119,9 +116,6 @@ final class Template_f5debee798 extends Latte\Runtime\Template
                 <li class="list-inline-item me-4"><a href="';
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Home:default')) /* line 66 */;
 		echo '">Domů</a></li>
-                <li class="list-inline-item me-4"><a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Results:default')) /* line 67 */;
-		echo '">Hledat</a></li>
                 <li class="list-inline-item"><a href="';
 		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link('Categories:default')) /* line 68 */;
 		echo '">Žánry</a></li>

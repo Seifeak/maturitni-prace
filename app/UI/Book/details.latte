@@ -5,55 +5,96 @@
 
 {block content}
     <div class="book-detail-container">
-        <div class="book-detail-cover"><img src="/assets/img/book_cover_placeholder.jpg"></div>
+        <div class="book-detail-cover"><img src="{$book["cover"]}"></div>
         <div class="book-detail-info">
             <div class="book-detail-main-content">
-                <h1 class="book-detail-title" style="margin-bottom: 0.5rem;">{$book["title"]}</h1>
-                <h2 class="book-detail-author" style="margin-bottom: 0px;">[author]</h2>
-                <h3 class="book-detail-releasedate" style="margin-bottom: 8px;">[release-date]</h3>
-                <div class="book-detail-rating"><img src="/assets/img/star.png" alt="">
-                    <img src="/assets/img/star.png" alt="">
-                    <img src="/assets/img/star.png" alt="">
-                    <img src="/assets/img/star.png" alt="">
-                    <img src="/assets/img/star-half.png" alt="">
-                    <sub class="book-detail-rating-value">4.5</sub></div>
+                {if $book["title"] == null}
+                    <h1 class="book-detail-title" style="margin-bottom: 0.5rem;">N/A</h1>
+                {else}
+                    <h1 class="book-detail-title" style="margin-bottom: 0.5rem;">{$book["title"]}</h1>
+                {/if}
+
+                {if $book["authors"] == null}
+                    <h2 class="book-detail-author" style="margin-bottom: 0px;">N/A</h2>
+                {else}
+                    <h2 class="book-detail-author" style="margin-bottom: 0px;">{$book["authors"]}</h2>
+                {/if}
+
+                {if $book["publishedDate"] == null}
+                    <h3 class="book-detail-releasedate" style="margin-bottom: 8px;">N/A</h3>
+                {else}
+                    <h3 class="book-detail-releasedate" style="margin-bottom: 8px;">{$book["publishedDate"]}</h3>
+                {/if}
+                <div class="book-detail-rating">
+                    {if $book["averageRating"] == null}
+                        <img src="/assets/img/star-empty.png" alt="">
+                        <img src="/assets/img/star-empty.png" alt="">
+                        <img src="/assets/img/star-empty.png" alt="">
+                        <img src="/assets/img/star-empty.png" alt="">
+                        <img src="/assets/img/star-empty.png" alt="">
+                        <sub class="book-detail-rating-value">N/A</sub>
+                    {else}
+                    {var $fullStars = floor(($book["averageRating"]))}
+                    {var $halfStar = ($book["averageRating"] - $fullStars) >= 0.5 ? true : false}
+                        {for $i = 0; $i < $fullStars; $i++}
+                            <img src="/assets/img/star.png" alt="">
+                        {/for}
+                        {if $halfStar}
+                            <img src="/assets/img/star-half.png" alt="">
+                        {/if}
+                        {for $i = 0; $i < 5 - $fullStars - $halfStar; $i++}
+                            <img src="/assets/img/star-empty.png" alt="">
+                        {/for}
+                        <sub class="book-detail-rating-value">{$book["averageRating"]}</sub>
+                    {/if}
+
+                </div>
                 <div class="book-detail-description">
-                    <p><br><strong><span style="color: rgb(0, 0, 0);">Lorem Ipsum</span></strong><span
-                                style="color: rgb(0, 0, 0);">&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span><br><br>
-                    </p>
+                    <p><br><span style="color: rgb(0, 0, 0);">{$book["description"]|noescape}</span></p>
                 </div>
             </div>
-            <div class="book-detail-getbutton-container">
-                <button class="btn btn-primary book-detail-getbutton" type="button">Získat knihu</button>
-            </div>
+            {if $book["buyLink"] != null}
+                <div class="book-detail-getbutton-container">
+                    <button class="btn btn-primary book-detail-getbutton" type="button"
+                            onclick="window.open({$book['buyLink']},'_blank')">Získat knihu
+                    </button>
+                </div>
+            {else}
+                <div class="book-detail-getbutton-container">
+                    <button class="btn btn-danger book-detail-getbutton" type="button">Nedostupné
+                    </button>
+                </div>
+            {/if}
             <div class="book-detail-moredetails">
                 <table>
                     <tr>
                         <th>Vydavatel:</th>
-                        <td>[publisher]</td>
+                        <td>{$book["publisher"]}</td>
                     </tr>
                     <tr>
                         <th>Počet stran:</th>
-                        <td>[page_count]</td>
+                        <td>{$book["pageCount"]}</td>
                     </tr>
                     <tr>
                         <th>Jazyk:</th>
-                        <td>[lang]</td>
+                        <td>{$book["language"]}</td>
                     </tr>
                     <tr>
                         <th>ISBN:</th>
-                        <td>[ISBN]</td>
+                        <td>{$book["isbn"]}</td>
                     </tr>
                 </table>
             </div>
         </div>
-        <div class="book-detail-categories"><h3>Žánr</h3>
-            <ul>
-                <li><a href="#">[category]</a></li>
-                <li><a href="#">[category]</a></li>
-                <li><a href="#">[category]</a></li>
-            </ul>
-        </div>
+        {if $book["categories"] != null}
+            <div class="book-detail-categories"><h3>Žánry</h3>
+                <ul>
+                    {foreach $book["categories"] as $category}
+                        <li><a n:href="Results:default, query => $category, filter => 'category'">{$category}</a></li>
+                    {/foreach}
+                </ul>
+            </div>
+        {/if}
     </div>
     <div class="book-detail-booksslider">
         <div class="book-detail-booksslider-container">

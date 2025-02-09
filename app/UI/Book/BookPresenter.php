@@ -15,8 +15,8 @@ class BookPresenter extends Presenter
 
     public function actionDetails($id)
     {
-        // Fetch book details using $id
         $book = $this->bookService->getBookById($id);
         $this->template->book = $book;
+        bdump($book);
     }
 }

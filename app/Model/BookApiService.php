@@ -22,45 +22,41 @@ class BookApiService
         $this->service = new Books($this->client);
     }
 
-    private function retrieveDetails($results): array
+    private function retrieveResults($results): array
     {
         $books = [];
 
         foreach ($results as $item) {
             $books[] = [
-                'title' => $item['volumeInfo']['title'] ?? 'Unknown',
-                'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : 'Unknown',
-                'publisher' => $item['volumeInfo']['publisher'] ?? 'Unknown',
-                'publishedDate' => $item['volumeInfo']['publishedDate'] ?? 'Unknown',
-                'description' => $item['volumeInfo']['description'] ?? 'Unknown',
-                'pageCount' => $item['volumeInfo']['pageCount'] ?? 'Unknown',
-                'categories' => isset($item['volumeInfo']['categories']) ? implode(', ', $item['volumeInfo']['categories']) : 'Unknown',
-                'averageRating' => $item['volumeInfo']['averageRating'] ?? 'Unknown',
-                'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? 'Unknown',
-                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? 'Unknown',
+                'id' => $item['id'] ?? null,
+                'title' => $item['volumeInfo']['title'] ?? null,
+                'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : null,
+                'publisher' => $item['volumeInfo']['publisher'] ?? null,
+                'publishedDate' => $item['volumeInfo']['publishedDate'] ?? null,
+                'description' => $item['volumeInfo']['description'] ?? null,
+                'pageCount' => $item['volumeInfo']['pageCount'] ?? null,
+                'categories' => isset($item['volumeInfo']['categories']) ? implode(', ', $item['volumeInfo']['categories']) : null,
+                'averageRating' => $item['volumeInfo']['averageRating'] ?? null,
+                'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? null,
+                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? null,
             ];
         }
 
         return $books;
     }
 
-    public function searchBooksByQuery(string $query, int $page = 1): array
+    private function getUniqueAuthors(array $books): array
     {
-        $startIndex = ($page - 1) * self::MAX_RESULTS;
+        $authors = [];
 
-        $params = [
-            'orderBy' => 'relevance',
-            'maxResults' => self::MAX_RESULTS,
-            'startIndex' => $startIndex,
-        ];
+        foreach ($books as $book) {
+            if (!empty($book['authors'])) {
+                $bookAuthors = explode(', ', $book['authors']);
+                $authors = array_merge($authors, $bookAuthors);
+            }
+        }
 
-        try{
-            $results = $this->service->volumes->listVolumes($query, $params);
-            return $this->retrieveDetails($results);
-        }
-        catch(\Exception $e){
-            return ['Error' => $e->getMessage()];
-        }
+        return array_unique($authors);
     }
 
     public function getBookById(string $id): array
@@ -68,16 +64,19 @@ class BookApiService
         try {
             $item = $this->service->volumes->get($id);
             $book = [
-                'title' => $item['volumeInfo']['title'] ?? 'Unknown',
-                'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : 'Unknown',
-                'publisher' => $item['volumeInfo']['publisher'] ?? 'Unknown',
-                'publishedDate' => $item['volumeInfo']['publishedDate'] ?? 'Unknown',
-                'description' => $item['volumeInfo']['description'] ?? 'Unknown',
-                'pageCount' => $item['volumeInfo']['pageCount'] ?? 'Unknown',
-                'categories' => isset($item['volumeInfo']['categories']) ? implode(', ', $item['volumeInfo']['categories']) : 'Unknown',
-                'averageRating' => $item['volumeInfo']['averageRating'] ?? 'Unknown',
-                'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? 'Unknown',
-                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? 'Unknown',
+                'title' => $item['volumeInfo']['title'] ?? null,
+                'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : null,
+                'publisher' => $item['volumeInfo']['publisher'] ?? null,
+                'publishedDate' => $item['volumeInfo']['publishedDate'] ?? null,
+                'description' => $item['volumeInfo']['description'] ?? null,
+                'pageCount' => $item['volumeInfo']['pageCount'] ?? null,
+                'categories' => isset($item['volumeInfo']['categories']) ? $item['volumeInfo']['categories'] : null,
+                'averageRating' => $item['volumeInfo']['averageRating'] ?? null,
+                'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? null,
+                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? null,
+                'language' => $item['volumeInfo']['language'] ?? null,
+                'isbn' => $item['volumeInfo']['industryIdentifiers'][1]["identifier"] ?? null,
+                'buyLink' => $item['saleInfo']['buyLink'] ?? null
             ];
 
             bdump($book);
@@ -87,11 +86,13 @@ class BookApiService
         }
     }
 
-    private function searchBooksByCriteria(string $query, string $type, int $page = 1): array
+    public function searchBooksByCriteria(string $query, string $type, int $page = 1): array
     {
         $startIndex = ($page - 1) * self::MAX_RESULTS;
+        $formerQuery = $query;
 
         $params = [
+            'orderBy' => 'relevance',
             'maxResults' => self::MAX_RESULTS,
             'startIndex' => $startIndex,
         ];
@@ -115,7 +116,18 @@ class BookApiService
 
         try{
             $results = $this->service->volumes->listVolumes($query, $params);
-            return $this->retrieveDetails($results);
+            $books = $this->retrieveResults($results);
+            $uniqueAuthors = $this->getUniqueAuthors($books);
+            $totalPages = ceil($results['totalItems'] / self::MAX_RESULTS);
+            return [
+                'query' => $formerQuery,
+                'filter' => $type,
+                'page' => $page,
+                'totalItems' => $results['totalItems'] ?? 0,
+                'totalPages' => $totalPages,
+                'books' => $books,
+                'filterAuthors' => $uniqueAuthors
+            ];
         }
         catch(\Exception $e){
             return ['Error' => $e->getMessage()];

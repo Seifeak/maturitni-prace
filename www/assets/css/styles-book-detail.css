@@ -108,8 +108,8 @@
 .book-detail-categories {
   align-items: flex-end;
   height: min-content;
-  width: min-content;
-  text-align: justify;
+  width: clamp(150px, 40%, 250px);
+  text-align: start;
   border: 1px groove #bdc3c7;
   border-radius: 6px;
   padding: 1.5rem;

@@ -223,7 +223,7 @@ class Container_324aa490d8 extends Nette\DI\Container
 
 	public function createServiceApplication__5(): App\UI\Results\ResultsPresenter
 	{
-		$service = new App\UI\Results\ResultsPresenter;
+		$service = new App\UI\Results\ResultsPresenter($this->getService('02'));
 		$service->injectPrimary(
 			$this->getService('http.request'),
 			$this->getService('http.response'),
