@@ -20,6 +20,6 @@ Instalace
 5. Cesta k webové aplikaci je localhost/maturitni-prace/www
 
 To do:
-README Replit
-Dokončit filtry
-finální úpravy CSS
+- README Replit
+- Dokončit filtry
+- finální úpravy CSS
