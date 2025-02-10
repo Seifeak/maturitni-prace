@@ -1,0 +1,870 @@
+[
+    {
+        "title": "A Tale of Two Cities",
+        "author": "Charles Dickens, Coles Notes Staff",
+        "publishedDate": "1987",
+        "id": "RAICpUfz1pEC",
+        "thumbnail": "http://books.google.com/books/content?id=RAICpUfz1pEC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "A Brief History of the Philosophy of Time",
+        "author": "Adrian Bardon",
+        "publishedDate": "2013-06-03",
+        "id": "MZ9wN6q9IcAC",
+        "thumbnail": "http://books.google.com/books/content?id=MZ9wN6q9IcAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Early Learning",
+        "author": "Siede Preis Photography (Firm)",
+        "publishedDate": "2003-01",
+        "id": "QGyqcQAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=QGyqcQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Náladové a protivné",
+        "author": "Hollandová Julie",
+        "publishedDate": "2016-04-25",
+        "id": "k1tTDAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=k1tTDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "A Series of Unfortunate Events #1: The Bad Beginning",
+        "author": "Lemony Snicket",
+        "publishedDate": "2009-03-17",
+        "id": "sUtrdMJvFXAC",
+        "thumbnail": "http://books.google.com/books/content?id=sUtrdMJvFXAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "A Game of Thrones (A Song of Ice and Fire, Book 1)",
+        "author": "George R.R. Martin",
+        "publishedDate": "2010-12-23",
+        "id": "JPDOSzE7Bo0C",
+        "thumbnail": "http://books.google.com/books/content?id=JPDOSzE7Bo0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "A Wrinkle in Time",
+        "author": "Madeleine L'Engle, Linda Ward Beech",
+        "publishedDate": "1997-09",
+        "id": "k2_JGLZhSDMC",
+        "thumbnail": "http://books.google.com/books/content?id=k2_JGLZhSDMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Adventures of Huckleberry Finn",
+        "author": "Mark Twain",
+        "publishedDate": "1991",
+        "id": "Dlj7y0OM58IC",
+        "thumbnail": "http://books.google.com/books/content?id=Dlj7y0OM58IC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Alcoholics Anonymous, Fourth Edition",
+        "author": "Alcoholics Anonymous World Services, Inc.",
+        "publishedDate": "2013-12-04",
+        "id": "mPsTEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=mPsTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Fire - Alex Cross 14 -",
+        "author": "James Patterson",
+        "publishedDate": "2010-08-23",
+        "id": "mMMlCcB0sNAC",
+        "thumbnail": "http://books.google.com/books/content?id=mMMlCcB0sNAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Alice's Adventures in Wonderland",
+        "author": "Lewis Carroll, Hugh Haughton",
+        "publishedDate": "1998",
+        "id": "t1xgQgAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=t1xgQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The World of All Creatures Great & Small",
+        "author": "All Creatures Great and Small",
+        "publishedDate": "2021-10-28",
+        "id": "9HRIEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=9HRIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "American interpreter",
+        "author": "Karel Jonáš",
+        "publishedDate": "1884",
+        "id": "-7AsAQAAMAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=-7AsAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Angels & Demons",
+        "author": "Dan Brown",
+        "publishedDate": "2001",
+        "id": "wiX1O1ZBdYoC",
+        "thumbnail": "http://books.google.com/books/content?id=wiX1O1ZBdYoC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Anne of Green Gables",
+        "author": "Lucy Maud Montgomery",
+        "publishedDate": "2015-01-27",
+        "id": "oLMmCwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=oLMmCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Berenstain Bears Count Their Blessings",
+        "author": "Stan Berenstain, Jan Berenstain",
+        "publishedDate": "2012-09-26",
+        "id": "azdYA9NR2y0C",
+        "thumbnail": "http://books.google.com/books/content?id=azdYA9NR2y0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Black Beauty: Aesthetics, Stylization, Politics",
+        "author": "Shirley Anne Tate",
+        "publishedDate": "2016-04-15",
+        "id": "ehgGDAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=ehgGDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Adventures of Captain Underpants (Now With a Dog Man Comic!): 25 1/2 Anniversary Edition",
+        "author": "Dav Pilkey",
+        "publishedDate": "2023-03-07",
+        "id": "zuSTEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=zuSTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Catching Fire",
+        "author": "Wyatt Wyatt",
+        "publishedDate": "1977",
+        "id": "qf-xAAAAIAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=qf-xAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Clifford the Big Red Dog (Classic Storybook)",
+        "author": "Norman Bridwell",
+        "publishedDate": "2012-10-01",
+        "id": "0tnHAgAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=0tnHAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Diana",
+        "author": "Andrew Morton",
+        "publishedDate": "2017-06-27",
+        "id": "x-IoDwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=x-IoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Double Down (Diary of a Wimpy Kid #11)",
+        "author": "Jeff Kinney",
+        "publishedDate": "2016-11-01",
+        "id": "dpy3CwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=dpy3CwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Divergent Series Ultimate Four-Book Collection",
+        "author": "Veronica Roth",
+        "publishedDate": "2014-07-08",
+        "id": "tTMGAwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=tTMGAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Dork Diaries Set",
+        "author": "Rachel Renée Russell",
+        "publishedDate": "2012-10-30",
+        "id": "bKrTdw1-h5IC",
+        "thumbnail": "http://books.google.com/books/content?id=bKrTdw1-h5IC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Mother Earth's Children",
+        "author": "Elizabeth Gordon",
+        "publishedDate": "2024-12-07",
+        "id": "BR01EQAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=BR01EQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "publishedDate": "2011-11-29",
+        "id": "OYtkbGl2j0sC",
+        "thumbnail": "http://books.google.com/books/content?id=OYtkbGl2j0sC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Fear of Flying",
+        "author": "Giuseppe Formato",
+        "publishedDate": "2016-09-15",
+        "id": "7AtlvgAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=7AtlvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Prom Queen",
+        "author": "R. L. Stine",
+        "publishedDate": "1992",
+        "id": "uLyyqNnE410C",
+        "thumbnail": "http://books.google.com/books/content?id=uLyyqNnE410C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Fifty Shades Trilogy: Fifty Shades of Grey / Fifty Shades Darker / Fifty Shades Freed",
+        "author": "E L James",
+        "publishedDate": "2012-06-14",
+        "id": "KBbXcF9LDhoC",
+        "thumbnail": "http://books.google.com/books/content?id=KBbXcF9LDhoC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Darker",
+        "author": "E. L. James",
+        "publishedDate": "2017",
+        "id": "msBcswEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=msBcswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Grey",
+        "author": "E L James",
+        "publishedDate": "2015-06-18",
+        "id": "TJKmCQAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=TJKmCQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Frank Merriwell's Chums",
+        "author": "Burt L. Standish",
+        "publishedDate": "2012-01",
+        "id": "PEyguAAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=PEyguAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Geronimo Stilton: My Name is Stilton, Geronimo Stilton",
+        "author": "Geronimo Stilton",
+        "publishedDate": "2022-05",
+        "id": "tVLZzgEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=tVLZzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "GOD'S LITTLE ACRE",
+        "author": "ERSKINE CALDWELL",
+        "publishedDate": "1933",
+        "id": "YRn0RR1F3SoC",
+        "thumbnail": "http://books.google.com/books/content?id=YRn0RR1F3SoC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Gone Girl",
+        "author": "Gillian Flynn",
+        "publishedDate": "2012",
+        "id": "5cu7sER89nwC",
+        "thumbnail": "http://books.google.com/books/content?id=5cu7sER89nwC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Gone with the wind",
+        "author": "Margaret Mitchell",
+        "publishedDate": "2004",
+        "id": "RqD80AEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=RqD80AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Goodnight Moon",
+        "author": "Margaret Wise Brown",
+        "publishedDate": "2020-10",
+        "id": "t8QDzgEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=t8QDzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Guess How Much I Love You",
+        "author": "Sam McBratney",
+        "publishedDate": "1997-09",
+        "id": "TDCTI6VI7O0C",
+        "thumbnail": "http://books.google.com/books/content?id=TDCTI6VI7O0C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Introducing Harry Bosch",
+        "author": "Michael Connelly",
+        "publishedDate": "2020-10-22",
+        "id": "bmjaDwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=bmjaDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "William a Harry",
+        "author": "Robert Lacey",
+        "publishedDate": "2021-01-01",
+        "id": "vaJGEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=vaJGEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter a Kámen mudrců",
+        "author": "J.K. Rowling",
+        "publishedDate": "2016-08-30",
+        "id": "qK3bDAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=qK3bDAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter and the Deathly Hallows",
+        "author": "J.K. Rowling",
+        "publishedDate": "2015-12-08",
+        "id": "gCtazG4ZXlQC",
+        "thumbnail": "http://books.google.com/books/content?id=gCtazG4ZXlQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter and the Goblet of Fire",
+        "author": "J.K. Rowling",
+        "publishedDate": "2015-12-08",
+        "id": "KKFTfEQ8bRAC",
+        "thumbnail": "http://books.google.com/books/content?id=KKFTfEQ8bRAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter and the Half-Blood Prince",
+        "author": "J.K. Rowling",
+        "publishedDate": "2015-12-08",
+        "id": "qaKkenvL29UC",
+        "thumbnail": "http://books.google.com/books/content?id=qaKkenvL29UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter and the Chamber of Secrets",
+        "author": "J. K. Rowling",
+        "publishedDate": "1999",
+        "id": "nmXTy4FPfcwC",
+        "thumbnail": "http://books.google.com/books/content?id=nmXTy4FPfcwC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter and the Order of the Phoenix",
+        "author": "J. K. Rowling",
+        "publishedDate": "2023-05-02",
+        "id": "CFJszQEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=CFJszQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter and the Philosopher's Stone - Gryffindor Edition",
+        "author": "J. K. Rowling",
+        "publishedDate": "2017",
+        "id": "lfYuvgAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=lfYuvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "author": "Joanne Kathleen Rowling",
+        "publishedDate": "2001",
+        "id": "cL7y0AEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=cL7y0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Heidi, děvčátko z hor",
+        "author": "Johanna Spyriová",
+        "publishedDate": "2014-01-01",
+        "id": "qFYnCwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=qFYnCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "How to Win Friends and Influence People in the Digital Age",
+        "author": "Brent Cole, Dale Carnegie, Dale Carnegie & Associates",
+        "publishedDate": "2012-12-25",
+        "id": "u1PF7izzWGcC",
+        "thumbnail": "http://books.google.com/books/content?id=u1PF7izzWGcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Charlie and the Chocolate Factory",
+        "author": "Roald Dahl",
+        "publishedDate": "1988",
+        "id": "rjpaAAAAYAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=rjpaAAAAYAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Charlotte's Web",
+        "author": "Amanda Li",
+        "publishedDate": "2006",
+        "id": "FQh-0-omMW0C",
+        "thumbnail": "http://books.google.com/books/content?id=FQh-0-omMW0C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Chicken Soup for the Soul",
+        "author": "Jack Canfield, Mark Victor Hansen",
+        "publishedDate": "2012-08-07",
+        "id": "XI0F7jSjg44C",
+        "thumbnail": "http://books.google.com/books/content?id=XI0F7jSjg44C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Choose Your Own Adventure 1-5 Boxed Set",
+        "author": "R. A. Montgomery",
+        "publishedDate": "2007*",
+        "id": "529vlQEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=529vlQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Jack Reacher: Never Go Back (Movie Tie-in Edition)",
+        "author": "Lee Child",
+        "publishedDate": "2016-09-06",
+        "id": "oH2NEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=oH2NEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "James and the Giant Peach",
+        "author": "Roald Dahl",
+        "publishedDate": "2007-02",
+        "id": "7b9zNwAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=7b9zNwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Chovejte se jako James Bond",
+        "author": "Stéphane Garnier",
+        "publishedDate": "2020-01-01",
+        "id": "dAAPEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=dAAPEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Jonathan Livingston Seagull",
+        "author": "Richard Bach",
+        "publishedDate": "2006",
+        "id": "2iWmPwAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=2iWmPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "JUNIE B. JONES IS NOT A CROOK(Junie B. Jones 9)",
+        "author": "BARBARA PARK",
+        "publishedDate": "2008-01-01",
+        "id": "_wI0NwAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=_wI0NwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Kane a Abel",
+        "author": "Jeffrey Archer",
+        "publishedDate": "2021-11-15",
+        "id": "TA5HEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=TA5HEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Left Behind",
+        "author": "Louis F. Borbon",
+        "publishedDate": "2023-02-23",
+        "id": "vyGvzwEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=vyGvzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Life After Life",
+        "author": "Raymond A. Moody",
+        "publishedDate": "2001",
+        "id": "tSeev4KVjtAC",
+        "thumbnail": "http://books.google.com/books/content?id=tSeev4KVjtAC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Little House on the Prairie",
+        "author": "Laura Ingalls Wilder",
+        "publishedDate": "1981",
+        "id": "KVDBjJq5dY0C",
+        "thumbnail": "http://books.google.com/books/content?id=KVDBjJq5dY0C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Long Walk to Freedom",
+        "author": "Devon W. Carbado",
+        "publishedDate": "2012-08-21",
+        "id": "FuPUYor10B8C",
+        "thumbnail": "http://books.google.com/books/content?id=FuPUYor10B8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Další love story",
+        "author": "BilyBuh",
+        "publishedDate": "2016-02-20",
+        "id": "phqbCwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=phqbCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Love You Forever",
+        "author": "Robert N. Munsch",
+        "publishedDate": "2003",
+        "id": "7ep09WAFbDwC",
+        "thumbnail": "http://books.google.com/books/content?id=7ep09WAFbDwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Lust for Life",
+        "author": "Sylvester McNutt III",
+        "publishedDate": "2017-10-24",
+        "id": "JALeswEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=JALeswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Magic Tree House Books 1-4 Boxed Set",
+        "author": "Mary Pope Osborne",
+        "publishedDate": "2001-05-29",
+        "id": "mEyTEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=mEyTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Me Before You",
+        "author": "LeoPard Books",
+        "publishedDate": "2016-03-05",
+        "id": "bo5VvgEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=bo5VvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Generál M.R. Štefánik",
+        "author": "Ferdinand Písecký",
+        "publishedDate": "1929",
+        "id": "O6F-AAAAMAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=O6F-AAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Nancy Drew Diaries #5",
+        "author": "Stefan Petrucha, Vaughn Ross",
+        "publishedDate": "2015-07-07",
+        "id": "6f_iCQAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=6f_iCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Partie de Manille pour OSS 117",
+        "author": "Jean Bruce",
+        "publishedDate": "2021-07-08",
+        "id": "v10XEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=v10XEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Osudy dobrého vojáka Švejka – Na frontě (2. díl)",
+        "author": "Jaroslav Hašek",
+        "publishedDate": "2022-11-16",
+        "id": "E62ZEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=E62ZEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "A Bear Called Paddington",
+        "author": "Michael Bond",
+        "publishedDate": "2014-07-22",
+        "id": "piUoAwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=piUoAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Pawel a Virginia. (Paul und Virginia.)",
+        "author": "Jacques Henri Bernardin de Saint-Pierre",
+        "publishedDate": "1836",
+        "id": "cZ9bAAAAcAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=cZ9bAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Tale of Peter Rabbit",
+        "author": "Beatrix Potter",
+        "publishedDate": "2023-06-29",
+        "id": "CLDIEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=CLDIEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "publishedDate": "1980",
+        "id": "EvqJCGeqKhsC",
+        "thumbnail": "http://books.google.com/books/content?id=EvqJCGeqKhsC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Mentální odolnost",
+        "author": "McNab Chris",
+        "publishedDate": "2024-02-01",
+        "id": "TX8pEQAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=TX8pEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Seven Habits of Highly Effective People",
+        "author": "Stephen R. Covey",
+        "publishedDate": "1989",
+        "id": "B_2cAAAAMAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=B_2cAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Alchemist - 10th Anniversary Edition",
+        "author": "Paulo Coelho",
+        "publishedDate": "2009-10-13",
+        "id": "FEL8DlqjYEkC",
+        "thumbnail": "http://books.google.com/books/content?id=FEL8DlqjYEkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "I Am the Cat in the Hat",
+        "author": "Alastair Heim",
+        "publishedDate": "2023-01-03",
+        "id": "XnKTEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=XnKTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Criterion Between The Allies of the Merciful & the Allies of the Devil",
+        "author": "Ibn Taymiyya",
+        "publishedDate": "1869-01-01",
+        "id": "0Z4kSmXOjG4C",
+        "thumbnail": "http://books.google.com/books/content?id=0Z4kSmXOjG4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Ginger Man",
+        "author": "James Patrick Donleavy",
+        "publishedDate": "1965",
+        "id": "ROmbRxEPhQ0C",
+        "thumbnail": "http://books.google.com/books/content?id=ROmbRxEPhQ0C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Go-Giver Dej a bude ti dáno",
+        "author": "Bob Burg, John David Mann",
+        "publishedDate": "2013-08-26",
+        "id": "UasRAgAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=UasRAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "Francis Scott Fitzgerald",
+        "publishedDate": "1993",
+        "id": "HestSXO362YC",
+        "thumbnail": "http://books.google.com/books/content?id=HestSXO362YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The House on the Cliff",
+        "author": "Franklin W. Dixon",
+        "publishedDate": "2023-06-14",
+        "id": "m6-zEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=m6-zEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Hitchhiker's Guide to the Galaxy: Hitchhiker's Guide to the Galaxy Book 1",
+        "author": "Douglas Adams",
+        "publishedDate": "1984-11-21",
+        "id": "dczPamLCmI4C",
+        "thumbnail": "http://books.google.com/books/content?id=dczPamLCmI4C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Hobbit",
+        "author": "J. R. R. Tolkien",
+        "publishedDate": "2009-04-20",
+        "id": "U799AY3yfqcC",
+        "thumbnail": "http://books.google.com/books/content?id=U799AY3yfqcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Horse Whisperer",
+        "author": "Nicholas Evans",
+        "publishedDate": "1996-05",
+        "id": "1JyhN-6pbkcC",
+        "thumbnail": "http://books.google.com/books/content?id=1JyhN-6pbkcC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "publishedDate": "2011-12",
+        "id": "_zSzAwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "publishedDate": "2011-12",
+        "id": "_zSzAwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=_zSzAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Chronicles of Narnia. Prince Caspian",
+        "author": "C. S. Lewis ",
+        "publishedDate": "2023-12-08",
+        "id": "VkroEAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=VkroEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Inheritance",
+        "author": "Christopher Paolini",
+        "publishedDate": "2012",
+        "id": "O5CWfd8DploC",
+        "thumbnail": "http://books.google.com/books/content?id=O5CWfd8DploC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Joy of Sex",
+        "author": "Alex Comfort",
+        "publishedDate": "2003",
+        "id": "RQwJ5AGCCXUC",
+        "thumbnail": "http://books.google.com/books/content?id=RQwJ5AGCCXUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Kite Runner",
+        "author": "Khaled Hosseini",
+        "publishedDate": "2007",
+        "id": "fwEGngEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=fwEGngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Little Prince",
+        "author": "Antoine de Saint-Exupéry",
+        "publishedDate": "1995",
+        "id": "CQYg20lTHtMC",
+        "thumbnail": "http://books.google.com/books/content?id=CQYg20lTHtMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Lost Symbol. by Dan Brown",
+        "author": "Dan Brown",
+        "publishedDate": "2009-09-01",
+        "id": "c_0AoQEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=c_0AoQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Lovely Bones",
+        "author": "Alice Sebold",
+        "publishedDate": "2014-12-15",
+        "id": "7v4VBAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=7v4VBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Magic School Bus Makes a Rainbow",
+        "author": "Joanna Cole",
+        "publishedDate": "1997",
+        "id": "N9RtkUTWtTwC",
+        "thumbnail": "http://books.google.com/books/content?id=N9RtkUTWtTwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Naked Woman",
+        "author": "Desmond Morris",
+        "publishedDate": "2011-05-31",
+        "id": "3VLHrxDy-hMC",
+        "thumbnail": "http://books.google.com/books/content?id=3VLHrxDy-hMC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The old man and the sea",
+        "author": "Ernest Hemingway",
+        "publishedDate": "1975",
+        "id": "K1cIZmFe7KoC",
+        "thumbnail": "http://books.google.com/books/content?id=K1cIZmFe7KoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "THE PILLARS OF THE EARTH",
+        "author": "KEN FOLLETT",
+        "publishedDate": "1989",
+        "id": "C6nOrc3M_y8C",
+        "thumbnail": "http://books.google.com/books/content?id=C6nOrc3M_y8C&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Power of Positive Thinking",
+        "author": "Norman Vincent Peale",
+        "publishedDate": "1990",
+        "id": "5tCjtAEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=5tCjtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Criterion Between The Allies of the Merciful & the Allies of the Devil",
+        "author": "Ibn Taymiyya",
+        "publishedDate": "1869-01-01",
+        "id": "0Z4kSmXOjG4C",
+        "thumbnail": "http://books.google.com/books/content?id=0Z4kSmXOjG4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Purpose-driven Life",
+        "author": "Rick Warren",
+        "publishedDate": "2003-06-24",
+        "id": "RHewj3pyXNsC",
+        "thumbnail": "http://books.google.com/books/content?id=RHewj3pyXNsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Three Railway Engines",
+        "author": "W. Awdry",
+        "publishedDate": "1998",
+        "id": "aLnVnMRtGUMC",
+        "thumbnail": "http://books.google.com/books/content?id=aLnVnMRtGUMC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Secret of William Storitz / Tajemství Viléma Storitze",
+        "author": "Jules Verne, Alena Kuzmová",
+        "publishedDate": "N/A",
+        "id": "G042EAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=G042EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Little Book of Sitecore® Tips",
+        "author": "Neil Shack",
+        "publishedDate": "2021-07-15",
+        "id": "Z0s5EAAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=Z0s5EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Shadowhunter's Codex",
+        "author": "Cassandra Clare, Joshua Lewis",
+        "publishedDate": "2013-10-29",
+        "id": "ZdGbAQAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=ZdGbAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Subtle Art of Not Giving a F*ck",
+        "author": "Mark Manson",
+        "publishedDate": "2016-09-13",
+        "id": "yng_CwAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=yng_CwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Tale of Peter Rabbit",
+        "author": "Beatrix Potter",
+        "publishedDate": "1928",
+        "id": "pXMk0TEfsR8C",
+        "thumbnail": "http://books.google.com/books/content?id=pXMk0TEfsR8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "Pocket Dictionary of the Bohemian & English Languages",
+        "author": "Václav Emanuel Mourek",
+        "publishedDate": "1896",
+        "id": "SXagVzW5tk8C",
+        "thumbnail": "http://books.google.com/books/content?id=SXagVzW5tk8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Vampire Chronicles Collection",
+        "author": "Anne Rice",
+        "publishedDate": "2002-10-01",
+        "id": "beqODQAAQBAJ",
+        "thumbnail": "http://books.google.com/books/content?id=beqODQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "New Spring",
+        "author": "Robert Jordan",
+        "publishedDate": "2005-06-13",
+        "id": "RwSagN7EtoUC",
+        "thumbnail": "http://books.google.com/books/content?id=RwSagN7EtoUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    {
+        "title": "The Women's Room",
+        "author": "Marilyn French",
+        "publishedDate": "1984-08-15",
+        "id": "tf2wAAAAIAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=tf2wAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Things Fall Apart - Student Packet",
+        "author": "Anc Staff Novel Units",
+        "publishedDate": "1998-12",
+        "id": "XfhFAAAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=XfhFAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "publishedDate": "2020-07-02",
+        "id": "TutbxAEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=TutbxAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "The Tobacco Road Less Traveled",
+        "author": "Jerry Wayne Jodice",
+        "publishedDate": "2014-10-06",
+        "id": "cxDxjwEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=cxDxjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Valley Of The Dolls",
+        "author": "Jacqueline Susann",
+        "publishedDate": "2025-01-23",
+        "id": "Y3HJ0AEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=Y3HJ0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "We Need More Rabbits!",
+        "author": "Judy Allen",
+        "publishedDate": "1999",
+        "id": "LvGlAAAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=LvGlAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "What to Expect When You're Expecting",
+        "author": "Heidi Murkoff, Sharon Mazel",
+        "publishedDate": "2008-01-01",
+        "id": "ASPVDMmiLZkC",
+        "thumbnail": "http://books.google.com/books/content?id=ASPVDMmiLZkC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Where the Wild Things Are: Max Plush Toy and Sticker Book",
+        "author": "Running Press",
+        "publishedDate": "2017-05-02",
+        "id": "ujBRvgAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=ujBRvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Wild Swans",
+        "author": "Stefano Andersen|Morris",
+        "publishedDate": "2018",
+        "id": "qScWzgEACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=qScWzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    {
+        "title": "Your Erroneous Zones",
+        "author": "Wayne W. Dyer",
+        "publishedDate": "2009",
+        "id": "lt-cAQAACAAJ",
+        "thumbnail": "http://books.google.com/books/content?id=lt-cAQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    }
+]
