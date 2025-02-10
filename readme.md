@@ -18,3 +18,8 @@ Instalace
 3. Zapni Apache
 4. V složce C:\xampp\htdocs\maturitni-prace spusť composer install
 5. Cesta k webové aplikaci je localhost/maturitni-prace/www
+
+To do:
+README Replit
+Dokončit filtry
+finální úpravy CSS
