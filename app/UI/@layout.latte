@@ -37,14 +37,18 @@
                                 stroke-linecap="round"></path> </g></svg></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link active" n:href="Home:default" style="color: #ffffff;">Domů</a></li>
+                <li class="nav-item"><a class="nav-link active" n:href="Home:default" style="color: #ffffff;">Domů</a>
+                </li>
                 {*<li class="nav-item"><a class="nav-link" n:href="Results:default" style="color: #ffffff;">Hledat</a></li>*}
-                <li class="nav-item"><a class="nav-link" n:href="Categories:default" style="color: #ffffff;">Žánry</a></li>
+                <li class="nav-item"><a class="nav-link" n:href="Categories:default" style="color: #ffffff;">Žánry</a>
+                </li>
             </ul>
-            <form style="display: flex;"><input class="border rounded-0 form-control" type="search" name="book_search"
-                                                placeholder="Hledat knihu"
-                                                style="border-radius: 0px;border-style: solid;border-top-left-radius: 6px;border-bottom-left-radius: 6px;">
-                <button class="btn btn-primary" type="button"
+            <form action="{link Results:default, query => '', filter => ''}" method="GET" style="display: flex;"><input
+                        class="border rounded-0 form-control" type="search" name="query"
+                        placeholder="Hledat knihu"
+                        style="border-radius: 0px;border-style: solid;border-top-left-radius: 6px;border-bottom-left-radius: 6px;">
+                <input type="hidden" name="filter" value="title">
+                <button class="btn btn-primary" type="submit"
                         style="width: 60px;height: auto;padding: initial;border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background: rgb(0,107,167);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
                          viewBox="0 0 16 16" class="bi bi-search" style="font-size: 23px;">
@@ -60,6 +64,7 @@
 {include content}
 
 
+
 <footer class="text-center" style="color: #21252933;">
         <div class="container text-muted py-4 py-lg-5 footer-container">
             <ul class="list-inline footer-list">
@@ -72,7 +77,9 @@
         </div>
 </footer>
 
+
 <script src="https://unpkg.com/nette-forms@3"></script>
+
 <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
 {include scripts}
 
