@@ -48,10 +48,14 @@
                         {/foreach}
                     </div>
                 {/if}
-                <div class="filter-box">
-                    <h3>Jazyk</h3>
-                    <input type="radio" name="language" id="czech"><label for="czech">česky</label>
-                </div>
+                {if count($filterLanguages) > 0}
+                    <div class="filter-box">
+                        <h3>Jazyk</h3>
+                        {foreach $filterLanguages as $language}}
+                            <input type="radio" name="language" id="{$language}"><label for="{$language}">{$language}</label>
+                        {/foreach}
+                    </div>
+                {/if}
             </form>
         </div>
         <div class="results-grid">
@@ -87,6 +91,7 @@
             <ul class="pagination">
                 {var $prevPage = max(1, $page - 1)}
         {var $nextPage = min($totalPages, $page + 1)}
+
 
 
 

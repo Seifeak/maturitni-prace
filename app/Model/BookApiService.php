@@ -39,6 +39,7 @@ class BookApiService
                 'averageRating' => $item['volumeInfo']['averageRating'] ?? null,
                 'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? null,
                 'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? null,
+                'language' => $item['volumeInfo']['language'] ?? null,
             ];
         }
 
@@ -57,6 +58,19 @@ class BookApiService
         }
 
         return array_unique($authors);
+    }
+
+    private function getUniqueLanguages(array $books): array
+    {
+        $languages = [];
+
+        foreach ($books as $book) {
+            if (!empty($book['language'])) {
+                $languages[] = $book['language'];
+            }
+        }
+
+        return array_unique($languages);
     }
 
     public function getBookById(string $id): array
@@ -118,6 +132,7 @@ class BookApiService
             $results = $this->service->volumes->listVolumes($query, $params);
             $books = $this->retrieveResults($results);
             $uniqueAuthors = $this->getUniqueAuthors($books);
+            $uniqueLanguages = $this->getUniqueLanguages($books);
             $totalPages = ceil($results['totalItems'] / self::MAX_RESULTS);
             return [
                 'query' => $formerQuery,
@@ -126,7 +141,8 @@ class BookApiService
                 'totalItems' => $results['totalItems'] ?? 0,
                 'totalPages' => $totalPages,
                 'books' => $books,
-                'filterAuthors' => $uniqueAuthors
+                'filterAuthors' => $uniqueAuthors,
+                'filterLanguages' => $uniqueLanguages,
             ];
         }
         catch(\Exception $e){
