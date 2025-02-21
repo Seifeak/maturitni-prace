@@ -69,7 +69,6 @@ class BookApiService
                 $languages[] = $book['language'];
             }
         }
-
         return array_unique($languages);
     }
 

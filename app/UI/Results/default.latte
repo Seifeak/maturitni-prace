@@ -14,16 +14,18 @@
                 <h1 class="result-count">nalezeno {$totalItems} výsledků.</h1>
             </div>
             <div class="search-bar">
-                <form class="search-form"><input class="form-control" type="search"
-                                                 style="border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-right-style: none;"
-                                                 placeholder="Hledat" name="search"><select class="form-select"
-                                                                                            style="border-radius: 0;width: auto;border-left-style: none;">
+                <form action="{link Results:default, query => '', filter => ''}" method="GET" class="search-form"><input
+                            name="query"
+                            class="form-control" type="search"
+                            style="border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-right-style: none;"
+                            placeholder="Hledat">{$query}<select name="filter" class="form-select"
+                                                         style="border-radius: 0;width: auto;border-left-style: none;">
                         <option value="all" selected="">Všechno</option>
                         <option value="title">Podle názvu</option>
                         <option value="author">Podle autora</option>
                         <option value="isbn">Podle ISBN</option>
                     </select>
-                    <button class="btn btn-primary" type="button"
+                    <button class="btn btn-primary" type="submit"
                             style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;width: 105.5938px;font-weight: bold;border-top-right-radius: 8px;border-bottom-right-radius: 8px;">
                         Hledat
                     </button>
@@ -39,6 +41,12 @@
             </h2>
 
             <form>
+                <div class="filter-box">
+                    <h3>Řadit podle</h3>
+                    <input type="radio" name="sort" id="relevance"><label for="relevance">Relevance</label>
+                    <br>
+                    <input type="radio" name="sort" id="latest"><label for="latest">Nejnovější</label>
+                </div>
                 {if count($filterAuthors) > 0}
                     <div class="filter-box">
                         <h3>Autor</h3>
@@ -51,8 +59,10 @@
                 {if count($filterLanguages) > 0}
                     <div class="filter-box">
                         <h3>Jazyk</h3>
-                        {foreach $filterLanguages as $language}}
-                            <input type="radio" name="language" id="{$language}"><label for="{$language}">{$language}</label>
+                        {foreach $filterLanguages as $language}
+                            <input type="radio" name="language" id="{$language}"><label
+                                for="{$language}">{$language}</label>
+                            <br>
                         {/foreach}
                     </div>
                 {/if}
@@ -91,6 +101,9 @@
             <ul class="pagination">
                 {var $prevPage = max(1, $page - 1)}
         {var $nextPage = min($totalPages, $page + 1)}
+
+
+
 
 
 

@@ -20,7 +20,6 @@ class ResultsPresenter extends Presenter
         $this->template->page = $page;
 
         $details = $this->bookService->searchBooksByCriteria($query, $filter, $page);
-        dump($details["filterAuthors"]);
         $this->template->query = $details['query'];
         $this->template->books = $details['books'];
         $this->template->totalItems = $details['totalItems'];
