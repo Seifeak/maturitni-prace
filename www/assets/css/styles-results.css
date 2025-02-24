@@ -72,15 +72,21 @@
 }
 
 .filter-panel .filter-submit{
-    display: none;
-    float: right;
+    display: flex;
+    justify-self: right;
     margin-top: 2rem;
     font-weight: bold;
     padding: 1rem;
 }
 
+@media screen and (max-width: 768px){
+    .filter-panel .filter-submit{
+        display: none;
+    }
+}
+
 .filter-panel.open .filter-submit {
-    display: block; /* Zobrazené, když je panel otevřený */
+    display: flex; /* Zobrazené, když je panel otevřený */
 }
 
 .results-grid {
