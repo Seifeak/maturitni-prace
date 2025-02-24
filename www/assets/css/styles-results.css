@@ -30,8 +30,9 @@
     transition: transform 0.3s;
 }
 
-.filter-toggle:hover {
+.filter-toggle:hover h2 span {
     transform: rotate(180deg);
+    transition: transform 0.3s;
 }
 
 /* Zobrazení filtrů při kliknutí */
@@ -68,6 +69,18 @@
 
 .filter-box label {
     margin-left: 5px;
+}
+
+.filter-panel .filter-submit{
+    display: none;
+    float: right;
+    margin-top: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.filter-panel.open .filter-submit {
+    display: block; /* Zobrazené, když je panel otevřený */
 }
 
 .results-grid {
