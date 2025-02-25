@@ -14,12 +14,12 @@
                 <h1 class="result-count">nalezeno {$totalItems} výsledků.</h1>
             </div>
             <div class="search-bar">
-                <form action="{link Results:default, query => '', filter => ''}" method="GET" class="search-form"><input
+                <form action="{link Results:default, query => '', type => ''}" method="GET" class="search-form"><input
                             value="{$query}"
                             name="query"
                             class="form-control" type="search"
                             style="border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-right-style: none;"
-                            placeholder="Hledat"><select name="filter" class="form-select"
+                            placeholder="Hledat"><select name="type" class="form-select"
                                                          style="border-radius: 0;width: auto;border-left-style: none;">
                         <option value="all" selected="">Všechno</option>
                         <option value="title">Podle názvu</option>
@@ -42,19 +42,39 @@
                                     d="M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z"/></svg></span>
                 </h2>
             </div>
-            <form>
+            <form action="{link Results:default, query => '', type => '', page => 1, orderBy => '', authorFilter => '', langRestrict => ''}"
+                  method="GET">
+                <input type="hidden" name="query" value="{$query}">
                 <div class="filter-box">
                     <h3>Řadit podle</h3>
-                    <input type="radio" name="sort" id="relevance"><label for="relevance">Relevance</label>
+                    {if $orderBy == "relevance"}
+                        <input type="radio" name="orderBy" id="relevance" value="relevance" checked><label
+                            for="relevance">Relevance</label>
+                    {else}
+                        <input type="radio" name="orderBy" id="relevance" value="relevance" checked><label
+                            for="relevance">Relevance</label>
+                    {/if}
                     <br>
-                    <input type="radio" name="sort" id="latest"><label for="latest">Nejnovější</label>
+                    {if $orderBy == "newest"}
+                        <input type="radio" name="orderBy" id="newest" value="newest" checked><label for="newest">Nejnovější</label>
+                    {else}
+                        <input type="radio" name="orderBy" id="newest" value="newest"><label
+                                for="newest">Nejnovější</label>
+                    {/if}
                 </div>
                 {if count($filterAuthors) > 0}
                     <div class="filter-box">
                         <h3>Autor</h3>
                         {foreach $filterAuthors as $author}
-                            <input type="radio" name="author" id="{$author}"><label for="{$author}">{$author}</label>
-                            <br>
+                            {if $authorFilter == $author}
+                                <input type="radio" name="authorFilter" id="{$author}" value="{$author}" checked><label
+                                    for="{$author}">{$author}</label>
+                                <br>
+                            {else}
+                                <input type="radio" name="authorFilter" id="{$author}" value="{$author}"><label
+                                    for="{$author}">{$author}</label>
+                                <br>
+                            {/if}
                         {/foreach}
                     </div>
                 {/if}
@@ -62,9 +82,16 @@
                     <div class="filter-box">
                         <h3>Jazyk</h3>
                         {foreach $filterLanguages as $language}
-                            <input type="radio" name="language" id="{$language}"><label
-                                for="{$language}">{$language}</label>
-                            <br>
+                            {if $langRestrict == $language}
+                                <input type="radio" name="langRestrict" id="{$language}" value="{$language}" checked>
+                                <label
+                                        for="{$language}">{$language}</label>
+                                <br>
+                            {else}
+                                <input type="radio" name="langRestrict" id="{$language}" value="{$language}"><label
+                                    for="{$language}">{$language}</label>
+                                <br>
+                            {/if}
                         {/foreach}
                     </div>
                 {/if}
@@ -109,23 +136,16 @@
 
 
 
-
-
-
-
-
-
-
                 <li class="page-item {if $page == 1}disabled{/if}">
                         <a class="page-link"
-                           aria-label="Previous" n:href="Results:default, query: $query, filter: $filter, page: $prevPage">
+                           aria-label="Previous" n:href="Results:default, query: $query, type: $type, page: $prevPage, orderBy: $orderBy, langRestrict: $langRestrict, authorFilter: $authorFilter">
                             <span aria-hidden="true">«</span>
                         </a>
         </li>
 
         {if $page > 3}
                     <li class="page-item"><a
-                                class="page-link" n:href="Results:default, query: $query, filter: $filter, page: 1">1</a>
+                                class="page-link" n:href="Results:default, query: $query, type: $type, page: 1, orderBy: $orderBy, langRestrict: $langRestrict, authorFilter: $authorFilter">1</a>
                     </li>
                     {if $page > 4}
                         <li class="page-item disabled"><span class="page-link">...</span></li>
@@ -134,7 +154,7 @@
 
         {for $i = max(1, $page - 2); $i <= min($totalPages, $page + 2); $i++}
                     <li class="page-item {if $i == $page}active{/if}">
-                        <a class="page-link" n:href="Results:default, query: $query, filter: $filter, page: $i">{$i}</a>
+                        <a class="page-link" n:href="Results:default, query: $query, type: $type, page: $i, orderBy: $orderBy, langRestrict: $langRestrict, authorFilter: $authorFilter">{$i}</a>
                     </li>
                 {/for}
 
@@ -143,13 +163,13 @@
                         <li class="page-item disabled"><span class="page-link">...</span></li>
                     {/if}
                     <li class="page-item"><a
-                                class="page-link" n:href="Results:default, query: $query, filter: $filter, page: $totalPages">{$totalPages}</a>
+                                class="page-link" n:href="Results:default, query: $query, type: $type, page: $totalPages, orderBy: $orderBy, langRestrict: $langRestrict, authorFilter: $authorFilter">{$totalPages}</a>
                     </li>
                 {/if}
 
                 <li class="page-item {if $page == $totalPages}disabled{/if}">
                     <a class="page-link"
-                       aria-label="Next" n:href="Results:default, query: $query, filter: $filter, page: $nextPage">
+                       aria-label="Next" n:href="Results:default, query: $query, type: $type, page: $nextPage, orderBy: $orderBy, langRestrict: $langRestrict, authorFilter: $authorFilter">
                         <span aria-hidden="true">»</span>
                     </a>
                 </li>

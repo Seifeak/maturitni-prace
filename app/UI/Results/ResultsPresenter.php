@@ -13,18 +13,26 @@ class ResultsPresenter extends Presenter
     {
     }
 
-    public function renderDefault(string $query, string $filter, int $page = 1): void
+    public function renderDefault(string $query, string $type = "all", int $page = 1, ?string $orderBy = null, ?string $authorFilter = null, ?string $langRestrict = null): void
     {
-        $this->template->query = $query;
-        $this->template->filter = $filter;
-        $this->template->page = $page;
+        $filterParams = [
+            'orderBy' => $orderBy,
+            'authorFilter' => $authorFilter,
+            'langRestrict' => $langRestrict,
+        ];
 
-        $details = $this->bookService->searchBooksByCriteria($query, $filter, $page);
+        $details = $this->bookService->searchBooksByCriteria($query, $type, $page, $filterParams);
         $this->template->query = $details['query'];
+        $this->template->type = $details['type'];
+        $this->template->page = $details['page'];
+        $this->template->orderBy = $details['orderBy'];
+        $this->template->langRestrict = $details['langRestrict'];
+        $this->template->authorFilter = $details['authorFilter'];
         $this->template->books = $details['books'];
         $this->template->totalItems = $details['totalItems'];
+        $this->template->totalPages = $details['totalPages'];
         $this->template->filterAuthors = $details['filterAuthors'];
         $this->template->filterLanguages = $details['filterLanguages'];
-        $this->template->totalPages = $details['totalPages'];
+
     }
 }

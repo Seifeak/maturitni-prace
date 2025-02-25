@@ -16,6 +16,9 @@ class BookPresenter extends Presenter
     public function actionDetails($id)
     {
         $book = $this->bookService->getBookById($id);
+        $similarBooks = $this->bookService->searchSimilarBooks($book['title']);
+
+        $this->template->similarBooks = $similarBooks;
         $this->template->book = $book;
         bdump($book);
     }

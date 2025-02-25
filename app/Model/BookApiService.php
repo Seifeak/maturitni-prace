@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Model;
+
 use Google\Client;
 use Google\Service\Books;
+use mysql_xdevapi\Exception;
 
 class BookApiService
 {
@@ -12,7 +14,7 @@ class BookApiService
 
     public function __construct(
         private readonly string $API_KEY,
-        private string $wwwDir
+        private string          $wwwDir
     )
     {
         $this->client = new Client();
@@ -38,7 +40,7 @@ class BookApiService
                 'categories' => isset($item['volumeInfo']['categories']) ? implode(', ', $item['volumeInfo']['categories']) : null,
                 'averageRating' => $item['volumeInfo']['averageRating'] ?? null,
                 'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? null,
-                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? null,
+                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? "/assets/img/book-cover-placeholder.png",
                 'language' => $item['volumeInfo']['language'] ?? null,
             ];
         }
@@ -86,7 +88,7 @@ class BookApiService
                 'categories' => isset($item['volumeInfo']['categories']) ? $item['volumeInfo']['categories'] : null,
                 'averageRating' => $item['volumeInfo']['averageRating'] ?? null,
                 'ratingsCount' => $item['volumeInfo']['ratingsCount'] ?? null,
-                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? null,
+                'cover' => $item['volumeInfo']['imageLinks']['thumbnail'] ?? "/assets/img/book-cover-placeholder.png",
                 'language' => $item['volumeInfo']['language'] ?? null,
                 'isbn' => $item['volumeInfo']['industryIdentifiers'][1]["identifier"] ?? null,
                 'buyLink' => $item['saleInfo']['buyLink'] ?? null
@@ -99,18 +101,25 @@ class BookApiService
         }
     }
 
-    public function searchBooksByCriteria(string $query, string $type, int $page = 1): array
+    public function searchBooksByCriteria(string $query, string $type, int $page = 1, ?array $filterParams): array
     {
         $startIndex = ($page - 1) * self::MAX_RESULTS;
         $formerQuery = $query;
 
+        // Zpracování filtrů podle parametrů
+        $orderBy = $filterParams['orderBy'] ?? 'relevance';
+        $authorFilter = $filterParams['authorFilter'] ?? null;
+        $langRestrict = $filterParams['langRestrict'] ?? null;
+
+
         $params = [
-            'orderBy' => 'relevance',
+            'orderBy' => $orderBy,
             'maxResults' => self::MAX_RESULTS,
             'startIndex' => $startIndex,
+            'langRestrict' => $langRestrict ?? '',
         ];
 
-        switch ($type){
+        switch ($type) {
             case "author":
                 $query = 'inauthor:' . $query;
                 break;
@@ -127,7 +136,14 @@ class BookApiService
                 break;
         }
 
-        try{
+        // Aplikace filtrů na query
+        if ($authorFilter) {
+            $query = 'inauthor:' . $authorFilter;
+        }
+
+        bdump($query);
+
+        try {
             $results = $this->service->volumes->listVolumes($query, $params);
             $books = $this->retrieveResults($results);
             $uniqueAuthors = $this->getUniqueAuthors($books);
@@ -135,21 +151,41 @@ class BookApiService
             $totalPages = ceil($results['totalItems'] / self::MAX_RESULTS);
             return [
                 'query' => $formerQuery,
-                'filter' => $type,
+                'type' => $type,
                 'page' => $page,
+                'orderBy' => $orderBy,
+                'langRestrict' => $langRestrict ?? null,
+                'authorFilter' => $authorFilter ?? null,
                 'totalItems' => $results['totalItems'] ?? 0,
                 'totalPages' => $totalPages,
                 'books' => $books,
                 'filterAuthors' => $uniqueAuthors,
                 'filterLanguages' => $uniqueLanguages,
             ];
-        }
-        catch(\Exception $e){
+        } catch (\Exception $e) {
             return ['Error' => $e->getMessage()];
         }
     }
 
+    public function searchSimilarBooks(string $query): array
+    {
+        $params = [
+            'orderBy' => 'relevance',
+            'maxResults' => 11,
+            'startIndex' => 1,
+        ];
 
+        try {
+            $results = $this->service->volumes->listVolumes($query, $params);
+            $books = $this->retrieveResults($results);
+        } catch (\Exception $e) {
+            return ['Error' => $e->getMessage()];
+        }
+
+        return $books;
+
+
+    }
 
 
 }
