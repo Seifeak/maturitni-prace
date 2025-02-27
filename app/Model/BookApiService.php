@@ -4,7 +4,6 @@ namespace App\Model;
 
 use Google\Client;
 use Google\Service\Books;
-use mysql_xdevapi\Exception;
 use Nette\Application\BadRequestException;
 
 class BookApiService

@@ -22,6 +22,11 @@
 		"google/apiclient": "^2.15.0",
 		"scriptotek/google-books": "^0.2.6"
 	},
+	"extra": {
+		"google/apiclient-services": [
+			"Books"
+		]
+	},
 	"require-dev": {
 		"nette/tester": "^2.5",
 		"symfony/thanks": "^1"
