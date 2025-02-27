@@ -5,6 +5,7 @@ namespace App\Model;
 use Google\Client;
 use Google\Service\Books;
 use mysql_xdevapi\Exception;
+use Nette\Application\BadRequestException;
 
 class BookApiService
 {
@@ -78,6 +79,11 @@ class BookApiService
     {
         try {
             $item = $this->service->volumes->get($id);
+
+            if (!$item || !isset($item['volumeInfo'])) {
+                throw new BadRequestException("Book not found", 404);
+            }
+
             $book = [
                 'title' => $item['volumeInfo']['title'] ?? null,
                 'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : null,
@@ -94,10 +100,9 @@ class BookApiService
                 'buyLink' => $item['saleInfo']['buyLink'] ?? null
             ];
 
-            bdump($book);
             return $book;
-        } catch (\Exception $e) {
-            return ['Error' => $e->getMessage()];
+        } catch (\Google\Exception $e) { // Pokud API hodí chybu
+            throw new BadRequestException("Book not found", 404);
         }
     }
 

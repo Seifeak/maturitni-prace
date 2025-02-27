@@ -49,9 +49,16 @@
 
 .book-detail-cover img {
   max-width: 100%;
+  min-width: 12vw;
   height: auto;
   object-fit: contain;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .book-detail-cover img {
+    min-width: 50vw;
+  }
 }
 
 .book-detail-info {

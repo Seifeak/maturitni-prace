@@ -4,9 +4,14 @@ parameters:
 
 application:
 	errorPresenter:
-		4xx: Error:Error4xx
-		5xx: Error:Error5xx
-	mapping: App\UI\*\**Presenter
+	    4xx: Error4xx
+	    5xx: Error5xx
+	mapping:
+	    '*': App\UI\*\**Presenter
+	    'Error4xx': App\UI\Error4xx\*Presenter
+	    'Error5xx': App\UI\Error5xx\*Presenter
+	silentLinks: true
+	catchExceptions: true
 
 
 database:

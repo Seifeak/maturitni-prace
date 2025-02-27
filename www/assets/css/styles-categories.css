@@ -1,7 +1,11 @@
 .genres-container {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 20px;
+}
+
+.genres-container h1{
+  font-weight: bold;
 }
 
 .genre-list {

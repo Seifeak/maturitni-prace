@@ -13,13 +13,16 @@ class BookPresenter extends Presenter
     {
     }
 
-    public function actionDetails($id)
+    public function actionDetails($id): void
     {
-        $book = $this->bookService->getBookById($id);
-        $similarBooks = $this->bookService->searchSimilarBooks($book['title']);
+        try{
+            $book = $this->bookService->getBookById($id);
+            $similarBooks = $this->bookService->searchSimilarBooks($book['title']);
+        }catch (\Exception $e){
+            $this->error("Kniha nebyla nalezena.", 404);
+        }
 
         $this->template->similarBooks = $similarBooks;
         $this->template->book = $book;
-        bdump($book);
     }
 }
