@@ -22,6 +22,9 @@
 		"google/apiclient": "^2.15.0",
 		"scriptotek/google-books": "^0.2.6"
 	},
+	"scripts": {
+		"pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+	},
 	"extra": {
 		"google/apiclient-services": [
 			"Books"
