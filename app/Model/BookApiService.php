@@ -84,6 +84,7 @@ class BookApiService
             }
 
             $book = [
+                'id' => $item['id'] ?? null,
                 'title' => $item['volumeInfo']['title'] ?? null,
                 'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : null,
                 'publisher' => $item['volumeInfo']['publisher'] ?? null,
@@ -171,17 +172,23 @@ class BookApiService
         }
     }
 
-    public function searchSimilarBooks(string $query): array
+    public function searchSimilarBooks(string $query, string $excludeId): array
     {
         $params = [
             'orderBy' => 'relevance',
             'maxResults' => 11,
-            'startIndex' => 1,
         ];
 
         try {
             $results = $this->service->volumes->listVolumes($query, $params);
             $books = $this->retrieveResults($results);
+
+            // Odstranění knihy, která je zobrazena
+            foreach ($books as $key => $book) {
+                if ($book['id'] === $excludeId) {
+                    unset($books[$key]);
+                }
+            }
         } catch (\Exception $e) {
             return ['Error' => $e->getMessage()];
         }
