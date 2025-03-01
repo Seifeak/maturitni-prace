@@ -4,12 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
     <title>{ifset title}{include title|stripHtml} | {/ifset}Databáze knih</title>
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/swiper-icons.css">
     <link rel="stylesheet" href="/assets/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="/assets/css/Navbar-With-Button-icons.css">
     {include styles}
+    <style>
+        * {
+            font-family: 'Noto Sans', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,6 +72,7 @@
 
 {include content}
 
+
 <footer class="text-center" style="color: #21252933;">
         <div class="container text-muted py-4 py-lg-5 footer-container">
             <ul class="list-inline footer-list">
@@ -74,7 +85,9 @@
         </div>
 </footer>
 
+
 <script src="https://unpkg.com/nette-forms@3"></script>
+
 <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
 {include scripts}
 
