@@ -53,11 +53,11 @@
                 <li class="nav-item"><a class="nav-link" n:href="Categories:default" style="color: #ffffff;">Žánry</a>
                 </li>
             </ul>
-            <form action="{link Results:default, query => '', filter => ''}" method="GET" style="display: flex;"><input
+            <form action="{link Results:default, query => '', type => ''}" method="GET" style="display: flex;"><input
                         class="border rounded-0 form-control" type="search" name="query"
                         placeholder="Hledat knihu"
-                        style="border-radius: 0px;border-style: solid;border-top-left-radius: 6px;border-bottom-left-radius: 6px;">
-                <input type="hidden" name="filter" value="title">
+                        style="border-radius: 0px;border-style: solid;border-top-left-radius: 6px;border-bottom-left-radius: 6px;" required>
+                <input type="hidden" name="type" value="title">
                 <button class="btn btn-primary" type="submit"
                         style="width: 60px;height: auto;padding: initial;border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background: rgb(0,107,167);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
