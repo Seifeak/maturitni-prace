@@ -19,6 +19,7 @@
 
 .slider {
   display: flex;
+  padding-top: 1rem;
   transition: transform 0.3s ease-in-out;
 }
 

@@ -9,21 +9,21 @@
         <div class="book-detail-info">
             <div class="book-detail-main-content">
                 {if $book["title"] == null}
-                    <h1 class="book-detail-title" style="margin-bottom: 0.5rem;">N/A</h1>
+                    <h1 class="book-detail-title">N/A</h1>
                 {else}
-                    <h1 class="book-detail-title" style="margin-bottom: 0.5rem;">{$book["title"]}</h1>
+                    <h1 class="book-detail-title">{$book["title"]}</h1>
                 {/if}
 
                 {if $book["authors"] == null}
-                    <h2 class="book-detail-author" style="margin-bottom: 0px;">N/A</h2>
+                    <h2 class="book-detail-author">N/A</h2>
                 {else}
-                    <h2 class="book-detail-author" style="margin-bottom: 0px;">{$book["authors"]}</h2>
+                    <h2 class="book-detail-author">{$book["authors"]}</h2>
                 {/if}
 
                 {if $book["publishedDate"] == null}
-                    <h3 class="book-detail-releasedate" style="margin-bottom: 8px;">N/A</h3>
+                    <h3 class="book-detail-releasedate">N/A</h3>
                 {else}
-                    <h3 class="book-detail-releasedate" style="margin-bottom: 8px;">{$book["publishedDate"]}</h3>
+                    <h3 class="book-detail-releasedate">{$book["publishedDate"]}</h3>
                 {/if}
                 <div class="book-detail-rating">
                     {if $book["averageRating"] == null}
@@ -98,7 +98,7 @@
     </div>
     <div class="book-detail-booksslider">
         <div class="book-detail-booksslider-container">
-            <h1 style="font-weight: bold;">Podobné knihy</h1>
+            <h1>Podobné knihy</h1>
             <div class="slider-container">
                 <button class="slider-button prev">
                     <svg xmlns="http://www.w3.org/2000/svg"

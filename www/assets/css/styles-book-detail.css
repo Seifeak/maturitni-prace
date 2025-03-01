@@ -86,16 +86,18 @@
 .book-detail-author {
   font-size: 1.2rem;
   color: #7f8c8d;
+  margin-bottom: 0;
 }
 
 .book-detail-releasedate {
   font-size: 1.2rem;
   color: #7f8c8d;
+  margin-bottom: 8px;
 }
 
 .book-detail-container p {
   font-size: 1rem;
-  line-height: 1.6;
+  color: black;
 }
 
 .book-detail-rating img {
@@ -111,6 +113,8 @@
 }
 
 .book-detail-description {
+  color: black;
+  line-height: 1.6;
   margin-top: 2rem;
 }
 
@@ -163,7 +167,7 @@
 .book-detail-booksslider-container h1{
   font-size: 2.5rem;
   color: #2c3e50;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .book-detail-booksslider-container {

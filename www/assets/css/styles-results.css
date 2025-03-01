@@ -14,6 +14,8 @@
 }
 
 
+
+
 /* Skrytí filtrů na mobilních zařízeních */
 .filter-panel .filter-box {
     padding: 10px 0;
@@ -59,10 +61,12 @@
     margin-bottom: 20px;
     text-align: center;
     color: #2c3e50;
+    font-weight: bold;
 }
 
 .filter-box h3 {
     font-size: 1.1rem;
+    font-weight: bold;
     margin-bottom: 5px;
     color: #34495e;
 }
@@ -177,6 +181,7 @@ filter-box input {
 
 .query-title {
     font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 1rem;
     color: #2c3e50;
 }
