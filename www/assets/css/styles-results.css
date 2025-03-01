@@ -149,8 +149,8 @@ filter-box input {
 .result-title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #2c3e50;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
