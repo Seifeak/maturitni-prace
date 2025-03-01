@@ -50,7 +50,7 @@
 
                 </div>
                 <div class="book-detail-description">
-                    <p><br><span style="color: rgb(0, 0, 0);">{$book["description"]|noescape}</span></p>
+                    {$book["description"]|noescape}
                 </div>
             </div>
             {if $book["buyLink"] != null}
