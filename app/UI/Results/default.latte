@@ -47,34 +47,38 @@
                 <input type="hidden" name="type" value="{$type}">
                 <div class="filter-box">
                     <h3>Řadit podle</h3>
-                    {if $orderBy == "relevance"}
-                        <input type="radio" name="orderBy" id="relevance" value="relevance" checked><label
-                            for="relevance">Relevance</label>
-                    {else}
-                        <input type="radio" name="orderBy" id="relevance" value="relevance" checked><label
-                            for="relevance">Relevance</label>
-                    {/if}
-                    <br>
-                    {if $orderBy == "newest"}
-                        <input type="radio" name="orderBy" id="newest" value="newest" checked><label for="newest">Nejnovější</label>
-                    {else}
-                        <input type="radio" name="orderBy" id="newest" value="newest"><label
+                    <div class="radio-item">
+                        {if $orderBy == "relevance"}
+                            <input type="radio" name="orderBy" id="relevance" value="relevance" checked><label
+                                for="relevance">Relevance</label>
+                        {else}
+                            <input type="radio" name="orderBy" id="relevance" value="relevance" checked><label
+                                for="relevance">Relevance</label>
+                        {/if}
+                    </div>
+                    <div class="radio-item">
+                        {if $orderBy == "newest"}
+                            <input type="radio" name="orderBy" id="newest" value="newest" checked><label for="newest">Nejnovější</label>
+                        {else}
+                            <input type="radio" name="orderBy" id="newest" value="newest"><label
                                 for="newest">Nejnovější</label>
-                    {/if}
+                        {/if}
+                    </div>
                 </div>
                 {if count($filterAuthors) > 0}
                     <div class="filter-box">
                         <h3>Autor</h3>
                         {foreach $filterAuthors as $author}
-                            {if $authorFilter == $author}
-                                <input type="radio" name="authorFilter" id="{$author}" value="{$author}" checked><label
-                                    for="{$author}">{$author}</label>
-                                <br>
-                            {else}
-                                <input type="radio" name="authorFilter" id="{$author}" value="{$author}"><label
-                                    for="{$author}">{$author}</label>
-                                <br>
-                            {/if}
+                            <div class="radio-item">
+                                {if $authorFilter == $author}
+                                    <input type="radio" name="authorFilter" id="{$author}" value="{$author}" checked>
+                                    <label
+                                            for="{$author}">{$author}</label>
+                                {else}
+                                    <input type="radio" name="authorFilter" id="{$author}" value="{$author}"><label
+                                        for="{$author}">{$author}</label>
+                                {/if}
+                            </div>
                         {/foreach}
                     </div>
                 {/if}
@@ -82,16 +86,17 @@
                     <div class="filter-box">
                         <h3>Jazyk</h3>
                         {foreach $filterLanguages as $language}
-                            {if $langRestrict == $language}
-                                <input type="radio" name="langRestrict" id="{$language}" value="{$language}" checked>
-                                <label
+                            <div class="radio-item">
+                                {if $langRestrict == $language}
+                                    <input type="radio" name="langRestrict" id="{$language}" value="{$language}"
+                                           checked>
+                                    <label
+                                            for="{$language}">{$language}</label>
+                                {else}
+                                    <input type="radio" name="langRestrict" id="{$language}" value="{$language}"><label
                                         for="{$language}">{$language}</label>
-                                <br>
-                            {else}
-                                <input type="radio" name="langRestrict" id="{$language}" value="{$language}"><label
-                                    for="{$language}">{$language}</label>
-                                <br>
-                            {/if}
+                                {/if}
+                            </div>
                         {/foreach}
                     </div>
                 {/if}
@@ -133,6 +138,13 @@
             <ul class="pagination">
                 {var $prevPage = max(1, $page - 1)}
         {var $nextPage = min($totalPages, $page + 1)}
+
+
+
+
+
+
+
                 <li class="page-item {if $page == 1}disabled{/if}">
                         <a class="page-link"
                            aria-label="Previous" n:href="Results:default, query: $query, type: $type, page: $prevPage, orderBy: $orderBy, langRestrict: $langRestrict, authorFilter: $authorFilter">
