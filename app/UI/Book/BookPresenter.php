@@ -17,7 +17,6 @@ class BookPresenter extends Presenter
     {
         try{
             $book = $this->bookService->getBookById($id);
-            bdump($book);
             $similarBooks = $this->bookService->searchSimilarBooks($book['title'], $book['id']);
         }catch (\Exception $e){
             $this->error("Kniha nebyla nalezena.", 404);

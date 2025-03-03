@@ -19,7 +19,7 @@ final class HomePresenter extends Presenter
         $this->fileManager = $fileManager;
     }
 
-    public function renderDefault()
+    public function renderDefault(): void
     {
         try {
             $this->template->recommendedBooks = $this->fileManager->get10RecommendedTitles();

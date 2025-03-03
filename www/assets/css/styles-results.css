@@ -13,15 +13,10 @@
     justify-content: space-between;
 }
 
-
-
-
-/* Skrytí filtrů na mobilních zařízeních */
 .filter-panel .filter-box {
     padding: 10px 0;
 }
 
-/* Tlačítko pro zobrazení/skrytí filtrů */
 .filter-toggle {
     display: none;
     font-size: 1.5rem;
@@ -37,13 +32,11 @@
     transition: transform 0.3s;
 }
 
-/* Zobrazení filtrů při kliknutí */
 .filter-panel.open .filter-box {
     display: block;
     animation: slideDown 0.3s ease-out;
 }
 
-/* Animace pro vysouvání */
 @keyframes slideDown {
     from {
         max-height: 0;
@@ -79,8 +72,7 @@
 
 .filter-box label {
     margin-left: 5px;
-
-    max-width: 200px; /* Adjust this value as needed */
+    max-width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -113,7 +105,7 @@ filter-box input {
 }
 
 .filter-panel.open .filter-submit {
-    display: flex; /* Zobrazené, když je panel otevřený */
+    display: flex;
 }
 
 .results-grid {
@@ -157,11 +149,21 @@ filter-box input {
     color: #2c3e50;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .result-author {
     font-size: 14px;
     color: #7f8c8d;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .search-header {

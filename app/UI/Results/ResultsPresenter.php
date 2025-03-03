@@ -21,7 +21,7 @@ class ResultsPresenter extends Presenter
             'langRestrict' => $langRestrict,
         ];
 
-        $details = $this->bookService->searchBooksByCriteria($query, $type, $page, $filterParams);
+        $details = $this->bookService->searchBooksByCriteria($query, $type, $filterParams, $page);
         $this->template->query = $details['query'];
         $this->template->type = $details['type'];
         $this->template->page = $details['page'];

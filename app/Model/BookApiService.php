@@ -83,7 +83,7 @@ class BookApiService
                 throw new BadRequestException("Book not found", 404);
             }
 
-            $book = [
+            return [
                 'id' => $item['id'] ?? null,
                 'title' => $item['volumeInfo']['title'] ?? null,
                 'authors' => isset($item['volumeInfo']['authors']) ? implode(', ', $item['volumeInfo']['authors']) : null,
@@ -99,23 +99,20 @@ class BookApiService
                 'isbn' => $item['volumeInfo']['industryIdentifiers'][1]["identifier"] ?? null,
                 'buyLink' => $item['saleInfo']['buyLink'] ?? null
             ];
-
-            return $book;
-        } catch (\Google\Exception $e) { // Pokud API hodí chybu
+        } catch (\Google\Exception $e) {
             throw new BadRequestException("Book not found", 404);
         }
     }
 
-    public function searchBooksByCriteria(string $query, string $type, int $page = 1, ?array $filterParams): array
+    public function searchBooksByCriteria(string $query, string $type, ?array $filterParams, int $page = 1): array
     {
         $startIndex = ($page - 1) * self::MAX_RESULTS;
         $formerQuery = $query;
 
-        // Zpracování filtrů podle parametrů
+        //parametry filtru
         $orderBy = $filterParams['orderBy'] ?? 'relevance';
         $authorFilter = $filterParams['authorFilter'] ?? null;
         $langRestrict = $filterParams['langRestrict'] ?? null;
-
 
         $params = [
             'orderBy' => $orderBy,
@@ -141,12 +138,9 @@ class BookApiService
                 break;
         }
 
-        // Aplikace filtrů na query
         if ($authorFilter) {
             $query = 'inauthor:' . $authorFilter;
         }
-
-        bdump($query);
 
         try {
             $results = $this->service->volumes->listVolumes($query, $params);
@@ -183,7 +177,6 @@ class BookApiService
             $results = $this->service->volumes->listVolumes($query, $params);
             $books = $this->retrieveResults($results);
 
-            // Odstranění knihy, která je zobrazena
             foreach ($books as $key => $book) {
                 if ($book['id'] === $excludeId) {
                     unset($books[$key]);

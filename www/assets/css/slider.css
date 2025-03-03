@@ -37,8 +37,6 @@
   background: #0056b3;
 }
 
-/* Responzivní úpravy */
-
 @media (max-width: 768px) {
   .book-card {
     flex: 0 0 50%;
@@ -59,7 +57,6 @@
   /*border: 1px solid #ddd;*/
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
-  flex: 1 1 auto;
   margin-right: 1.5rem;
 }
 
